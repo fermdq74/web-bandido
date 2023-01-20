@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>We Are Bandido - The most wanted video mood makers</title>
+    <meta name="description" content="" />
+    <meta name="author" content="MEIN" />
+    <meta property="og:image" content="images/share-image.png" />
+    <meta property="og:description" content="" />
+    <meta property="og:title" content="Bandido" />
+    <meta name="twitter:title" content="Bandido" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/bandido-icon-x2.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/bandido-icon-1.5.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/bandido-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/bandido-icon.png" />
+    <link rel="shortcut icon" href="images/bandido-icon.png" />
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
+    <link href="css/montreal.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="fixed">
+        <header>
+            <h1 class="title"><a href="/"><img src="images/logo.svg" alt="Bandido"></a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <footer>
+            <div class="hidden"></div>
+        </footer>
+        <div class="scroller">
+            <img src="images/arrows.svg">
+        </div>
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar"></div>
+            <div id="progressOval" class="oval"><img src="images/oval.svg"></div>
+        </div>
+        <div class="rotate" aria-valuetext="Please, rotate your smartphone">
+            <img alt="Rotate your smartphone" src="/svg/rotate-smartphone.svg" />
+            <div class="credits" aria-hidden="true">
+                <small>Rotate smartphone icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+                    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+            </div>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <section id="d1" class="slide goto">
+            <div class="fragment">
+                <h2 class="claim">
+                    <div>We are</div>
+                    <img src="images/logo.svg" alt="Bandido"></a>
+                </h2>
+            </div>
+        </section>
+        <section id="d2" class="slide goto">
+            <div class="fragment">
+                <h2 class="claim">The Most Wanted Video Mood Makers</h2>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+            document.getElementById("progressOval").style.marginLeft = scrolled + "%";
+        }
+    </script>
+</body>
