@@ -155,7 +155,8 @@
 html {
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
@@ -169,6 +170,7 @@ body {
     scrollbar-width: none;
     overflow-x: hidden;
     cursor: url('../images/mouse.svg'),auto;
+    height: 100%;
 }
 
 body a {
@@ -242,7 +244,8 @@ nav ul li a:hover {
     pointer-events: all;
     position: fixed;
     top: 1rem;
-    left: 2rem
+    left: 2rem;
+    display: none;
 }
 
 .fixed header a {
@@ -432,18 +435,44 @@ nav ul li a:hover {
     word-break: break-all;
 }
 
-.main #d2 .fragment h2.claim {
+.main #d2 .fragment h2.claim2 {
     font-size: 10rem;
     line-height: .8em;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
 }
+.main #d2 .fragment h2.claim2 span {
+    opacity: 0;
+}
+
+.main #d2 .fragment2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;    
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    word-break: keep-all;
+    min-width: 100%;
+}
+.main #d2 .fragment2 h2.claim3 {
+    color: #73A073;
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 420px;
+    letter-spacing: -10px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 420px;
+    width: 5301px;
+    position: absolute;
+}
 
 .main #d3 {
     height: 0
 }
-
 .main #d4 .fragment {
     color: #000;
     background-color: #f1d8d8;

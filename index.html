@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="images/bandido-icon.png" />
     <script
         src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
+    <script src="jquery-3.6.3.min.js"></script>
     <link href="css/montreal.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
@@ -46,7 +47,7 @@
             <div id="progressOval" class="oval"><img src="images/oval.svg"></div>
         </div>
         <div class="rotate" aria-valuetext="Please, rotate your smartphone">
-            <img alt="Rotate your smartphone" src="/svg/rotate-smartphone.svg" />
+            <img alt="Rotate your smartphone" src="images/rotate-smartphone.svg" />
             <div class="credits" aria-hidden="true">
                 <small>Rotate smartphone icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
                     <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
@@ -54,7 +55,7 @@
         </div>
     </div>
     <div id="main" class="main">
-        <section id="d1" class="slide goto">
+        <section id="d1" class="slide goto" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
             <div class="fragment">
                 <h2 class="claim">
                     <div>We are</div>
@@ -62,23 +63,85 @@
                 </h2>
             </div>
         </section>
-        <section id="d2" class="slide goto">
-            <div class="fragment">
-                <h2 class="claim">The Most Wanted Video Mood Makers</h2>
+        <section id="d2" class="slide goto" >
+            <div class="fragment" data-start="position:relative;" 
+                data-300-top="position:fixed;" data--5000-top="position:fixed;transform:translate(-50%,-50%)" 
+                data--7000-top="transform:translate(-200%,-50%)" 
+                data-anchor-target="#d2">
+                <h2 class="claim2">The Most Wanted Video Mood Makers</h2>
             </div>
+            <div class="fragment2" data-start="position:relative;"
+                data--5000-top="position:fixed;transform:translate(50%,-50%)" 
+                data--10000-top="transform:translate(-230%,-50%)" 
+                data-anchor-target="#d2">
+                <h2 class="claim3">We are cinematic gems Thieves</h2>
+            </div>
+        </section>
+
+        <section id="d3" class="slide goto">
+            
         </section>
     </div>
 
     <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { myFunction() };
+        // slides positions
+        var elementPosition1 = $('#d1').position().top + $('#d1').height();
+        var elementPosition2 = $('#d2').position().top + $('#d2').height();
 
-        function myFunction() {
+        // 2nd slide text
+        var textWrapper = document.querySelector(".claim2");
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g,"<span class='letter'>$&</span>");
+        var letter = document.querySelectorAll(".letter");
+
+        window.onscroll = function () { 
+            progressBar();
+           
+            console.log( $(window).scrollTop(), elementPosition1 );
+
+            // Display 2nd slide
+            if ( $(window).scrollTop() > elementPosition1 ) {
+                
+                $('header').show(400);
+                
+                let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * letter.length;
+                console.log(scrolled);
+                
+                letter.forEach(function(l, i) {
+                if ( (scrolled - i) > 1 )
+                    l.style.setProperty("opacity", 1);
+                else if ( (scrolled - i) < 0 )
+                    l.style.setProperty("opacity", 0);
+                else
+                    l.style.setProperty("opacity", (scrolled - i));
+                });
+
+            } else {
+                $('header').hide(400);
+            }
+            
+        };
+
+        function progressBar() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
             document.getElementById("progressBar").style.width = scrolled + "%";
             document.getElementById("progressOval").style.marginLeft = scrolled + "%";
+        }
+        
+    </script>
+
+    <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init({
+            constants: {
+                //fill the box for a "duration" of 150% of the viewport (pause for 150%)
+                //adjust for shorter/longer pause
+                box: '150p'
+            }
+        });
+        if (s.isMobile()) {
+          s.destroy();
         }
     </script>
 </body>
