@@ -470,25 +470,34 @@ nav ul li a:hover {
     position: absolute;
 }
 
-.main #d3 {
-    height: 0
-}
-.main #d4 .fragment {
-    color: #000;
-    background-color: #f1d8d8;
-    box-sizing: border-box;
-    width: 66vw;
-    padding: 10vh 5vw;
-    max-width: 100%
+.main #d3 .fragment {
+    position: absolute;
+    /*left: 5%;
+    right: 5%;*/
+    top: 9.68%;
+    bottom: 9.68%;
+    width: 90vw;
+    background: #1E001E;
+    max-height: 400px;
+    margin: auto;
 }
 
-.main #d4 .fragment img {
-    margin: auto;
-    width: 100%;
-    max-width: 720px;
-    height: auto;
-    display: block
+
+.main #d4 .fragment {
+    color: #000;
+    background-color: #CDCDCD;
+    position: absolute;
+    display: none;
+
+    width: 66vw;
+    padding: 10vh 5vw;
+    max-width: 938px;
+    max-height: 521px;
+    top: 20%;
+    bottom: 20%;
 }
+
+
 
 .main #d5 .fragment {
     color: #000;

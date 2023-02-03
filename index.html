@@ -79,8 +79,21 @@
         </section>
 
         <section id="d3" class="slide goto">
-            
+            <div class="fragment" data-start="position:relative;"
+            data--10000-top="position:fixed;transform:translate(-50%, 100%)" 
+            data--11000-top="transform:translate(-50%, 0%)" 
+            data-anchor-target="#d3">
+            </div>
         </section>
+
+        <section id="d4" class="slide goto">
+            <div class="fragment" data-start="position:relative;"
+            data--12000-top="position:fixed;transform:translate(-50%, 100%);display:block" 
+            data--13000-top="transform:translate(-50%, 0%)" 
+            data-anchor-target="#d4">
+            </div>
+        </section>
+
     </div>
 
     <script>
@@ -103,7 +116,7 @@
                 
                 $('header').show(400);
                 
-                let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * letter.length;
+                let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * (letter.length * 2);
                 console.log(scrolled);
                 
                 letter.forEach(function(l, i) {
@@ -137,7 +150,7 @@
             constants: {
                 //fill the box for a "duration" of 150% of the viewport (pause for 150%)
                 //adjust for shorter/longer pause
-                box: '150p'
+                box: '200p'
             }
         });
         if (s.isMobile()) {
