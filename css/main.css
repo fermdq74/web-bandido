@@ -482,22 +482,39 @@ nav ul li a:hover {
     margin: auto;
 }
 
-
 .main #d4 .fragment {
     color: #000;
     background-color: #CDCDCD;
     position: absolute;
-    display: none;
-
+    /*display: none;*/
+    top: 0;
+    bottom: 0;
+    margin: auto;
     width: 66vw;
-    padding: 10vh 5vw;
     max-width: 938px;
     max-height: 521px;
-    top: 20%;
-    bottom: 20%;
+}
+
+.main #d4 .fragment p {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.875rem;
+    line-height: 1;
+    color: #9191EC;
+    padding: 2vh 2vw;
+}
+
+.main #d4 .fragment p span {
+    color: #000;
+    background-color: black;
+    display: inline-block;
+    line-height: 1.1;
+    margin-bottom: 4px;
 }
 
 
+/*  ----- */
 
 .main #d5 .fragment {
     color: #000;
