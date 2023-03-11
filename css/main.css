@@ -513,67 +513,102 @@ nav ul li a:hover {
     margin-bottom: 4px;
 }
 
+.main #d5 .fragment {
+    color: #000;
+    background-color: #CDCDCD;
+    position: absolute;
+    /*display: none;*/
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 66vw;
+    max-width: 938px;
+    max-height: 560px;
+    display: flex;
+}
+.main #d5 .fragment .black-box {
+    background-color: #000;
+    color: white;
+    max-width: 780px;
+    margin: auto;
+    padding: 22px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.main #d5 .fragment .black-box-left {
+    width:75%;
+    float: left;
+}
+.main #d5 .fragment .black-box-right {
+    width:50%;
+    float: right;
+}
+.main #d5 .fragment .black-box p {
+    font-size: 1.875rem;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    margin-inline-end: 5.7em
+}
+.main #d5 .fragment .black-box .keyboard .key {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    float: left;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+.main #d5 .fragment .black-box .keyboard .key:active {
+    background-color: #73A073;
+}
+.main #d5 .fragment .black-box .keyboard .key.key-delete {
+    background-color: #FF644B;
+    font-size: 1.25rem;
+}
+.main #d5 .fragment .black-box .keyboard .key.key-delete:active {
+    background-color: #000;
+    color: #fff;
+}
+.main #d5 .fragment .black-box .keyboard .key.key-enter {
+    background-color: #73A073;
+    font-size: 1.25rem;
+}
+.main #d5 .fragment .black-box .keyboard .key.key-enter:active {
+    background-color: #000;
+    color: #fff;
+}
+.main #d5 .fragment .black-box .keyboard .key:nth-child(3n+2) {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+.main #d5 .fragment .black-box .keyboard .key:nth-child(10),
+.main #d5 .fragment .black-box .keyboard .key:nth-child(11),
+.main #d5 .fragment .black-box .keyboard .key:nth-child(12) {
+    margin-bottom: 0;
+}
+.flash {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 420px;
+    height: 180px;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+.flash.flash-incorrect {
+    background: #FF644B;
+}
 
 /*  ----- */
 
-.main #d5 .fragment {
-    color: #000;
-    background-color: #e7e7e7;
-    box-sizing: border-box;
-    width: 70vw;
-    padding: 8vh 5vw;
-    max-width: 100%;
-    top: 51%;
-    left: 51%
-}
-
-.main #d5 .fragment p {
-    font-size: 2.1vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    margin-block-start: 1em;
-    margin-inline-end: 4.7em
-}
-
-.main #d5 .fragment p:first-of-type {
-    margin-block-start: 0
-}
-
-.main #d5 .fragment p:first-of-type::before {
-    display: block;
-    content: '';
-    margin-bottom: .2em;
-    width: 2.5em;
-    height: .2em;
-    background-color: #000
-}
-
-.main #d5 .fragment .bg {
-    font-size: 12vw;
-    letter-spacing: -.06em;
-    line-height: .8em;
-    position: absolute;
-    z-index: -1;
-    right: 4vw;
-    top: 50%;
-    text-align: start;
-    color: #fff;
-    transform: translateY(-50%)
-}
-
-.main #d5 .fragment .bg span {
-    display: block;
-    position: relative
-}
-
-.main #d5 .fragment .bg sup {
-    position: absolute;
-    font-size: 18%;
-    letter-spacing: 0em;
-    top: 0.1em;
-    right: 0;
-    line-height: 1em
-}
 
 .main #d6-1 .fragment,
 .main #d6-2 .fragment {
