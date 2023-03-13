@@ -566,11 +566,11 @@ nav ul li a:hover {
 .main #d5 .fragment .black-box .keyboard .key:active {
     background-color: #73A073;
 }
-.main #d5 .fragment .black-box .keyboard .key.key-delete {
+.main #d5 .fragment .black-box .keyboard .key.key-get-code {
     background-color: #FF644B;
     font-size: 1.25rem;
 }
-.main #d5 .fragment .black-box .keyboard .key.key-delete:active {
+.main #d5 .fragment .black-box .keyboard .key.key-get-code:active {
     background-color: #000;
     color: #fff;
 }
@@ -602,11 +602,65 @@ nav ul li a:hover {
     height: 180px;
     font-size: 1.5rem;
     padding: 20px;
+    display: none;
 }
 .flash.flash-incorrect {
     background: #FF644B;
 }
+.flash.flash-loading {
+    background: #73A073;
+}
+.flash.flash-loading .container{
+	position:relative;
+	text-align:center;
+}
+.flash.flash-loading .container .Loading {
+	position:relative;
+	width:100%;
+	height:30px;
+	display:flex;
+	align-items:center;
+	border:1px solid #000;
+    margin: 25px 0;
+}
+.container .Loading span{
+	position:absolute;
+	width:0%;
+	height:100%;
+	background-color:#000;
+}
+.flash.flash-loading i {
+    float: right;
+    font-style: normal;
+}
+.flash.flash-contact {
+    background: #FFE696;
+    height: auto;
+    width: auto;
+    max-height: 510px;
+    max-width: 580px;
+}
+.flash.flash-contact .form-wrapper {
+    max-width: 458px;
+    margin: 50px auto 0;
+}
+.flash.flash-contact .row-form {
+    margin: 20px 0;
+}
+.flash.flash-contact .text-field {
+    border: none;
+    border-radius: 25px;
+    padding: 0 15px;
+    line-height: 50px;
+    width: 100%;
+    max-width: 550px;
+}
 
+.btn-submit {
+    float: right;
+    background-color: #000;
+    color: white;
+}
 /*  ----- */
 
 

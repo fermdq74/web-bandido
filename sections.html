@@ -117,7 +117,7 @@
                             <div class="key"> 7 </div>
                             <div class="key"> 8 </div>
                             <div class="key"> 9 </div>
-                            <div class="key key-delete"> Get<br>
+                            <div class="key key-get-code"> Get<br>
                                 Code </div>
                             <div class="key"> 0 </div>
                             <div class="key key-enter"> ⮠<br>
@@ -129,6 +129,38 @@
                     <p>Incorrect security code</p>  
                     <button id="showContact">GET CODE</button>
                     <button id="closeFlash">OK</button>
+                </div>
+                <div class="flash flash-loading">
+                    <p>Correct code!</p>  
+                    <div class="container">	
+                        <div class="Loading">
+                            <span data-charge='100'></span>
+                        </div>
+                    </div>
+                    <p>Loading Videos… <i>0%</i></p>
+                </div>
+                <div class="flash flash-contact">
+                    <p>Get your code.</p>
+                    <div class="form-wrapper">
+                        <form>
+                            <div class="row-form">
+                                <input type="text" name="name" placeholder="Name" class="text-field" />
+                            </div>
+                            <div class="row-form">
+                                <input type="text" name="company" placeholder="Company" class="text-field" />
+                            </div>
+                            <div class="row-form">
+                                <input type="email" name="email" placeholder="Email" class="text-field" />
+                            </div>
+                            <div class="row-form">
+                                <textarea name="message" placeholder="Optional message" class="text-field" ></textarea>
+                            </div>
+                            <div class="row-form">
+                                <input type="submit" name="submit" placeholder="Send" class="btn-submit" />
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
             </div>
 
@@ -174,9 +206,45 @@
             document.getElementById("progressOval").style.marginLeft = scrolled + "%";
         }
 
-        $( "#closeFlash" ).click(function() {
-            $(this).parent().hide();
+        // Keyboard  functionality
+        $( ".key-enter" ).click(function() {
+            isValidCode = true;
+
+            if ( isValidCode ) {
+                $( ".flash.flash-loading" ).show();
+                loadingBar();
+            } else {
+                $( ".flash.flash-incorrect" ).show();
+            }
         });
+
+        $( "#closeFlash" ).click(function() {
+            $( this ).parent().hide();
+        });
+
+        $( ".key-get-code" ).click(function() {
+            $( ".flash.flash-contact" ).show();
+        });
+
+        // Loading bar
+        const loadingBar = function() {
+
+            $('.Loading span').animate({
+                width: $('.Loading span').data('charge') + '%'
+            }, 1000);
+
+            var getCounter = parseInt($('.flash-loading i').text());
+
+            var MyCounter = setInterval(function () {
+                if (getCounter !== 101) {
+                    $('.flash-loading i').text(getCounter++ + '%');
+                } else {
+                    clearInterval(MyCounter);
+                };
+
+            }, 10);
+
+        };
         
     </script>
 
