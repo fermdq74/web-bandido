@@ -21,6 +21,7 @@
         src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
     <script src="jquery-3.6.3.min.js"></script>
     <link href="css/montreal.css" rel="stylesheet">
+    <link href="css/supply.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 
@@ -108,27 +109,29 @@
                     </div>
                     <div class="black-box-right">
                         <div class="keyboard">
-                            <div class="key"> 1 </div>
-                            <div class="key"> 2 </div>
-                            <div class="key"> 3 </div>
-                            <div class="key"> 4 </div>
-                            <div class="key"> 5 </div>
-                            <div class="key"> 6 </div>
-                            <div class="key"> 7 </div>
-                            <div class="key"> 8 </div>
-                            <div class="key"> 9 </div>
+                            <div class="key">1</div>
+                            <div class="key">2</div>
+                            <div class="key">3</div>
+                            <div class="key">4</div>
+                            <div class="key">5</div>
+                            <div class="key">6</div>
+                            <div class="key">7</div>
+                            <div class="key">8</div>
+                            <div class="key">9</div>
                             <div class="key key-get-code"> Get<br>
                                 Code </div>
-                            <div class="key"> 0 </div>
+                            <div class="key">0</div>
                             <div class="key key-enter"> ⮠<br>
                                 Enter </div>
                         </div>
                     </div>
                 </div>
                 <div class="flash flash-incorrect">
-                    <p>Incorrect security code</p>  
-                    <button id="showContact">GET CODE</button>
-                    <button id="closeFlash">OK</button>
+                    <p>Incorrect security code</p> 
+                    <div class="flash-buttons">
+                        <button id="showContact">GET CODE</button>
+                        <button id="closeFlash">OK</button>
+                    </div>
                 </div>
                 <div class="flash flash-loading">
                     <p>Correct code!</p>  
@@ -139,8 +142,9 @@
                     </div>
                     <p>Loading Videos… <i>0%</i></p>
                 </div>
-                <div class="flash flash-contact">
+                <div class="flash flash-contact flash-form">
                     <p>Get your code.</p>
+                    <button class="close-form">Close</button>
                     <div class="form-wrapper">
                         <form>
                             <div class="row-form">
@@ -155,8 +159,8 @@
                             <div class="row-form">
                                 <textarea name="message" placeholder="Optional message" class="text-field" ></textarea>
                             </div>
-                            <div class="row-form">
-                                <input type="submit" name="submit" placeholder="Send" class="btn-submit" />
+                            <div class="row-form row-submit">
+                                <input type="submit" name="submit" value="Send" class="btn-submit" />
                             </div>
                         </form>
                     </div>
@@ -166,7 +170,57 @@
 
         </section>
 
+        <section id="d6" class="slide goto">
+            <div class="fragment">
+
+                <div class="video-list">
+
+                    <div class="campaign">Coca Cola → Tenderos</div>
+                    <div class="agency">Agency → Bla Bla</div>
+                    
+                    <div class="video-items">
+                        <div class="video-card">
+                            <div class="video-title">Video Mood</div>
+                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-1.jpg"></a></div>
+                            <div class="video-popup">
+                                <a href="/" class="btn-close-popup">Close</a>
+                                <iframe src="https://player.vimeo.com/video/799104662?h=afc6ad639e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Advert</div>
+                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-2.jpg"></a></div>
+                            <div class="video-popup">
+                                <a href="/" class="btn-close-popup">Close</a>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Video Mood</div>
+                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-1.jpg"></a></div>
+                            <div class="video-popup">
+                                <a href="/" class="btn-close-popup">Close</a>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Advert</div>
+                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-2.jpg"></a></div>
+                            <div class="video-popup">
+                                <a href="/" class="btn-close-popup">Close</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </div>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
     <script>
         // slides positions
@@ -208,22 +262,28 @@
 
         // Keyboard  functionality
         $( ".key-enter" ).click(function() {
+
+            // Complete this functionality to check for the code
             isValidCode = true;
 
             if ( isValidCode ) {
                 $( ".flash.flash-loading" ).show();
                 loadingBar();
             } else {
-                $( ".flash.flash-incorrect" ).show();
+                $('.flash.flash-incorrect').css('display', 'flex');
             }
         });
 
         $( "#closeFlash" ).click(function() {
-            $( this ).parent().hide();
+            $( ".flash" ).hide();
         });
 
         $( ".key-get-code" ).click(function() {
             $( ".flash.flash-contact" ).show();
+        });
+
+        $( ".close-form" ).click(function() {
+            $( ".flash-form" ).hide();
         });
 
         // Loading bar
@@ -240,12 +300,24 @@
                     $('.flash-loading i').text(getCounter++ + '%');
                 } else {
                     clearInterval(MyCounter);
+                    getCounter = 0;
+                    $('.flash-loading').hide();
                 };
 
             }, 10);
 
         };
         
+        // Video popup management
+        $(' .video-thumb a' ).click(function(e) {
+            e.preventDefault();
+            $( this ).closest( ".video-card" ).find( ".video-popup" ).show();
+        });
+        $(' a.btn-close-popup' ).click(function(e) {
+            e.preventDefault();
+            $( this ).closest( ".video-popup" ).hide();
+        });
+
     </script>
 
 </body>

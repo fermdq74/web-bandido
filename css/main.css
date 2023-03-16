@@ -550,18 +550,26 @@ nav ul li a:hover {
     letter-spacing: 0;
     margin-inline-end: 5.7em
 }
+.main #d5 .fragment .black-box .keyboard {
+    font-family: 'PP Supply Sans';
+}
 .main #d5 .fragment .black-box .keyboard .key {
     width: 90px;
     height: 90px;
     background-color: white;
     color: #000;
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     font-size: 5rem;
+    font-weight: 200;
+    line-height: 1;
     float: left;
     margin-bottom: 1.25rem;
     text-align: center;
+}
+.main #d5 .fragment .black-box:hover {
+    cursor: pointer;
 }
 .main #d5 .fragment .black-box .keyboard .key:active {
     background-color: #73A073;
@@ -569,6 +577,8 @@ nav ul li a:hover {
 .main #d5 .fragment .black-box .keyboard .key.key-get-code {
     background-color: #FF644B;
     font-size: 1.25rem;
+    font-weight: 400;
+    align-items: center;
 }
 .main #d5 .fragment .black-box .keyboard .key.key-get-code:active {
     background-color: #000;
@@ -577,6 +587,8 @@ nav ul li a:hover {
 .main #d5 .fragment .black-box .keyboard .key.key-enter {
     background-color: #73A073;
     font-size: 1.25rem;
+    font-weight: 400;
+    align-items: center;
 }
 .main #d5 .fragment .black-box .keyboard .key.key-enter:active {
     background-color: #000;
@@ -592,6 +604,8 @@ nav ul li a:hover {
     margin-bottom: 0;
 }
 .flash {
+    font-family: 'PP Supply Sans';
+    font-size: 1.5rem;
     position: absolute;
     margin: auto;
     top: 0;
@@ -599,13 +613,21 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     width: 420px;
-    height: 180px;
-    font-size: 1.5rem;
+    height: 140px;
     padding: 20px;
     display: none;
+    letter-spacing: 1px;
+    flex-direction: column;
+}
+.flash:hover {
+    cursor: pointer;
 }
 .flash.flash-incorrect {
     background: #FF644B;
+    justify-content: space-between;
+}
+.flash.flash-incorrect button:hover {
+    text-decoration: underline;
 }
 .flash.flash-loading {
     background: #73A073;
@@ -640,14 +662,27 @@ nav ul li a:hover {
     max-height: 510px;
     max-width: 580px;
 }
+.flash.flash-contact p {
+    float: left;
+}
 .flash.flash-contact .form-wrapper {
     max-width: 458px;
-    margin: 50px auto 0;
+    margin: 90px auto 0;
 }
 .flash.flash-contact .row-form {
     margin: 20px 0;
+    display: flex;
 }
-.flash.flash-contact .text-field {
+.flash.flash-contact .row-submit {
+    justify-content: end;
+    margin-top: 30px;
+}
+.text-field {
+    font-family: 'PP Supply Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.2;
     border: none;
     border-radius: 25px;
     padding: 0 15px;
@@ -655,11 +690,107 @@ nav ul li a:hover {
     width: 100%;
     max-width: 550px;
 }
-
+.flash-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .btn-submit {
     float: right;
+}
+button, input[type="submit"] {
+    appearance: none;
+    border: none;
+    background: none;appearance: none;
+    border: none;
+    background: none;
+    font-family: 'PP Supply Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #1E001E;
+    padding: 0;
+}
+button:hover, input[type="submit"]:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.close-form {
+    float: right;
+}
+
+.main #d6 .fragment {
+    background-color: #CDCDCD;
+    position: absolute;
+    /*display: none;*/
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 90vw;
+    max-height: 600px;
+    margin: 20px;
+}
+
+.main #d6 .fragment .campaign, .main #d6 .fragment .agency {
+    font-size: 2.5rem;
+}
+
+.video-list {
+    padding: 20px 20px 0;
+    overflow-y: scroll;
+    max-height: 90%;
+    margin: 20px auto;
+}
+.video-list::-webkit-scrollbar {
+    width: 24px;
+    background-color: white;
+}
+.video-list::-webkit-scrollbar-track {
+    background-color: white;
+    border-right: solid 20px #CDCDCD;
+    border-top: solid 20px #CDCDCD;
+    border-bottom: solid 20px #CDCDCD;
+}
+.video-list::-webkit-scrollbar-thumb {
     background-color: #000;
+    border-right: solid 20px #CDCDCD;
+}
+.video-items {
+    max-width: 940px;
+    margin: 40px auto 0;
+}
+
+.main #d6 .fragment .video-card {
+    width: 50%;
+    float: left;
+    margin-bottom: 3rem;
+}
+.main #d6 .fragment .video-card .video-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+}
+.main #d6 .fragment .video-popup {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.btn-close-popup {
     color: white;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-top: 20px;
+    right: 30px;
+}
+.btn-close-popup:hover {
+    text-decoration: underline;
 }
 /*  ----- */
 
