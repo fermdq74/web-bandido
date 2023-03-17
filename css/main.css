@@ -770,14 +770,18 @@ button:hover, input[type="submit"]:hover {
     font-size: 1.5rem;
     margin-bottom: 0.625rem;
 }
-.main #d6 .fragment .video-popup {
+.video-popup {
     background-color: #000;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 80px);
     position: fixed;
-    top: 0;
+    top: 5rem;
     left: 0;
     display: none;
+    z-index: 9999;
+}
+.video-popup, .video-popup iframe {
+    cursor: url('../images/btn-play-video.svg'),auto;
 }
 .btn-close-popup {
     color: white;
@@ -790,129 +794,67 @@ button:hover, input[type="submit"]:hover {
     right: 30px;
 }
 .btn-close-popup:hover {
+    cursor: pointer;
     text-decoration: underline;
-}
-/*  ----- */
-
-
-.main #d6-1 .fragment,
-.main #d6-2 .fragment {
-    color: #fff;
-    background-color: #000;
-    box-sizing: border-box;
-    width: 90vw;
-    padding: 5vh 5vw;
-    max-width: 100%
-}
-
-.main #d6-1 .fragment div.content,
-.main #d6-2 .fragment div.content {
-    display: flex
-}
-
-.main #d6-1 .fragment div.column,
-.main #d6-2 .fragment div.column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin: 1em
-}
-
-.main #d6-1 .fragment div.column:first-of-type::before,
-.main #d6-2 .fragment div.column:first-of-type::before {
-    display: block;
-    content: '';
-    margin-bottom: .2em;
-    width: 8em;
-    height: .45em;
-    background-color: #fff
-}
-
-.main #d6-1 .fragment h2,
-.main #d6-2 .fragment h2 {
-    font-size: 1.6vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    margin-bottom: 1em
-}
-
-.main #d6-1 .fragment h3,
-.main #d6-2 .fragment h3 {
-    font-size: 2.2vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    text-transform: uppercase
-}
-
-.main #d6-1 .fragment h4,
-.main #d6-2 .fragment h4 {
-    font-size: 1.3vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em
-}
-
-.main #d6-1 .fragment p,
-.main #d6-2 .fragment p {
-    font-size: 1vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    margin: 1em 0
-}
-
-.main #d6-1 .fragment ul,
-.main #d6-2 .fragment ul {
-    font-size: 1vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-.main #d6-1 .fragment ul li,
-.main #d6-2 .fragment ul li {
-    margin: 1em 0;
-    padding: 0
-}
-
-.main #d6-1 .fragment ul li strong,
-.main #d6-2 .fragment ul li strong {
-    display: block;
-    text-transform: uppercase;
-    text-decoration: underline
-}
-
-.main #d6-1 .fragment ul.simple li,
-.main #d6-2 .fragment ul.simple li {
-    margin: 0.3em 0
-}
-
-.main #d6-1 .fragment div.content {
-    flex-direction: row
-}
-
-.main #d6-1 .fragment div.column::before {
-    display: block;
-    content: '';
-    margin-bottom: .2em;
-    width: 8em;
-    height: .45em;
-    background-color: #000
-}
-
-.main #d6-2 .fragment div.content {
-    flex-direction: column
-}
-
-.main #d6-2 .fragment p {
-    text-align: justify
 }
 
 .main #d7 .fragment {
-    color: red;
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%
+    background: #C8F0F0;
+    width: 84vw;
+    max-height: 650px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;    
+    max-width: 1150px;
 }
+.main #d7 .fragment .content-wrapper {
+    padding: 20px 45px;
+}
+.main #d7 .fragment .content-wrapper p {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin-inline-end: 5.7em;
+}
+.main #d7 .fragment .content-wrapper .clients {
+    margin: 2rem 4rem;
+}
+.main #d7 .fragment .content-wrapper .clients h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+.main #d7 .fragment .content-wrapper .clients .logo-cell {
+    background-color: white;
+    width: 120px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    float: left;
+}
+.main #d7 .fragment .content-wrapper .clients .logo-cell:nth-child(3n+3) {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.main #d7 .fragment .content-wrapper .clients .clients-left-column {
+    float: left;
+    width: 45%;
+}
+.main #d7 .fragment .content-wrapper .clients .clients-right-column {
+    float: right;
+    width: 45%;
+}
+.main #d7 .hand {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -70%;
+    margin: auto;
+}
+
+/*  ----- */
 
 .main #d7 .fragment .glide,
 .main #d7 .fragment .glide__fake {

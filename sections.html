@@ -56,6 +56,10 @@
         </div>
     </div>
     <div id="main" class="main">
+        <div class="video-popup">
+            <a href="/" class="btn-close-popup">Close</a>
+            <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <section id="d1" class="slide goto" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
             <div class="fragment">
                 <h2 class="claim">
@@ -181,41 +185,65 @@
                     <div class="video-items">
                         <div class="video-card">
                             <div class="video-title">Video Mood</div>
-                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-1.jpg"></a></div>
-                            <div class="video-popup">
-                                <a href="/" class="btn-close-popup">Close</a>
-                                <iframe src="https://player.vimeo.com/video/799104662?h=afc6ad639e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            </div>
+                            <div class="video-thumb"><a href="/" data-video-id="799104662"><img src="images/video-thumb-1.jpg"></a></div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">Advert</div>
-                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-2.jpg"></a></div>
-                            <div class="video-popup">
-                                <a href="/" class="btn-close-popup">Close</a>
-                            </div>
+                            <div class="video-thumb"><a href="/" data-video-id="797806367"><img src="images/video-thumb-2.jpg"></a></div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">Video Mood</div>
-                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-1.jpg"></a></div>
-                            <div class="video-popup">
-                                <a href="/" class="btn-close-popup">Close</a>
-                            </div>
+                            <div class="video-thumb"><a href="/" data-video-id="796583362"><img src="images/video-thumb-1.jpg"></a></div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">Advert</div>
-                            <div class="video-thumb"><a href="/"><img src="images/video-thumb-2.jpg"></a></div>
-                            <div class="video-popup">
-                                <a href="/" class="btn-close-popup">Close</a>
-                            </div>
+                            <div class="video-thumb"><a href="/" data-video-id="804672860"><img src="images/video-thumb-2.jpg"></a></div>
                         </div>
                     </div>
 
                 </div>
 
             </div>
+        </section>
+
+        <section id="d7" class="slide goto">
+            <div class="fragment">
+                <div class="content-wrapper">
+                    <p>We are wanted by the best<br >
+                        brands, ad agencies<br>
+                        and Interpol.</p>
+                        <div class="clients">
+                            <div class="clients-left-column">
+                                <h4>Brands</h4>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                            </div>
+                            <div class="clients-right-column">
+                                <h4>Agencies</h4>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="hand" data-charge='100'><img src="images/hand-with-diamond.svg"></div>
         </section>
 
     </div>
@@ -309,14 +337,29 @@
         };
         
         // Video popup management
-        $(' .video-thumb a' ).click(function(e) {
+        $( '.video-thumb a' ).click(function(e) {
             e.preventDefault();
-            $( this ).closest( ".video-card" ).find( ".video-popup" ).show();
+            var videoId = $(this).data( 'video-id' );
+            $( '#video' ).attr( 'src', 'https://player.vimeo.com/video/' + videoId + '?title=0&byline=0&portrait=0' );
+            $( '.video-popup' ).show();
         });
         $(' a.btn-close-popup' ).click(function(e) {
             e.preventDefault();
-            $( this ).closest( ".video-popup" ).hide();
+            $( this ).closest( '.video-popup' ).hide();
+            $( '#video' ).attr( 'src', '' );
         });
+
+        //hand
+        $( ".logo-cell" ).click(function() {
+            slidingHand();
+        });
+        const slidingHand = function() {
+
+            $('.hand').animate({
+                right: $('.hand').data('charge') + 'px'
+            }, 1000);
+
+        }
 
     </script>
 
