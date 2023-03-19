@@ -854,288 +854,133 @@ button:hover, input[type="submit"]:hover {
     margin: auto;
 }
 
-/*  ----- */
-
-.main #d7 .fragment .glide,
-.main #d7 .fragment .glide__fake {
-    position: relative;
-    margin: 0
-}
-
-.main #d7 .fragment .glide .glide__slide,
-.main #d7 .fragment .glide__fake .glide__slide {
-    box-sizing: border-box;
-    height: auto;
-    min-height: 86vh;
-    padding: 8vh 5vw;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 100%
-}
-
-.main #d7 .fragment .glide .glide__arrows,
-.main #d7 .fragment .glide__fake .glide__arrows {
-    position: absolute;
-    bottom: 2vh;
-    right: 2vw;
-    cursor: pointer
-}
-
-.main #d7 .fragment .glide .glide__arrows>div,
-.main #d7 .fragment .glide__fake .glide__arrows>div {
-    width: 10vw
-}
-
-.main #d7 .fragment .glide .glide__arrows>div:last-child,
-.main #d7 .fragment .glide__fake .glide__arrows>div:last-child {
-    transform: rotate(180deg)
-}
-
-.main #d7 .fragment ul {
-    margin: 0;
-    padding: 0
-}
-
-.main #d7 .fragment .title {
-    background-color: #393291;
-    display: flex;
-    align-items: center
-}
-
-.main #d7 .fragment .title h2 {
-    flex: 1;
-    text-transform: uppercase;
-    font-size: 5vw;
-    letter-spacing: 0em;
-    line-height: 1em
-}
-
-.main #d7 .fragment .section {
-    background-color: #d3d3d3;
-    display: flex;
-    align-items: center
-}
-
-.main #d7 .fragment .section div {
-    flex: 1;
-    padding-right: 1.33vw;
-    border-right: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end
-}
-
-.main #d7 .fragment .section p {
-    flex: 2;
-    padding-left: 1.3vw;
-    padding-right: 10vw;
-    text-align: justify;
-    font-size: 1.5vw;
-    letter-spacing: 0em;
-    line-height: 1.3em
-}
-
-.main #d7 .fragment .section p.notitle {
-    border-left: 1px solid red
-}
-
-.main #d7 .fragment .section h3,
-.main #d7 .fragment .section h4 {
-    text-transform: uppercase;
-    text-align: end;
-    font-size: 2.5vw;
-    letter-spacing: 0em;
-    line-height: 1.3em
-}
-
-.main #d7 .fragment .content {
-    background-color: #d3d3d3
-}
-
-.main #d7 .fragment .video {
-    position: relative;
-    padding: 70vh 0 0 0;
-    max-height: 100%
-}
-
-.main #d7 .fragment .video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%
-}
-
-.main #d7 .fragment .video-wrapper {
-    position: relative;
-    opacity: 0.7
-}
-
-.main #d7 .fragment .video-wrapper.playing {
-    opacity: 1
-}
-
-.main #d7 .fragment .video-wrapper.playing::after {
-    opacity: 0
-}
-
-.main #d7 .fragment .video-wrapper::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    content: '►';
-    color: #d3d3d3;
-    font-size: 10vw;
-    letter-spacing: 0em;
-    line-height: 1em
-}
-
-.main #d7 .fragment .video-wrapper video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%
-}
-
-.main #d7 .fragment .image {
-    width: 100%;
-    height: auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center
-}
-
-.main #d7 .fragment .columns {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    flex-wrap: wrap
-}
-
-.main #d7 .fragment .columns.two>div {
-    flex-basis: 49%
-}
-
-.main #d7 .fragment .columns.three>div {
-    flex-basis: 32%
-}
-
-.main #d7 .fragment .columns.bytwo>div {
-    margin-bottom: 1vw
-}
-
-.main #d7 .fragment .password {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(57, 50, 145, 0.7);
-    text-align: center
-}
-
-.main #d7 .fragment .password h2 {
-    color: #fff;
-    text-transform: uppercase
-}
-
-.main #d7 .fragment .password ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    justify-content: space-around;
-    align-items: center
-}
-
-.main #d7 .fragment .password ul li {
-    flex: 1;
-    list-style: none;
-    padding: 1vw 2vw;
-    margin: 1vw;
-    font-size: 3vw;
-    letter-spacing: -.06em;
-    line-height: 1.2em;
-    border: 2px solid red;
-    border-radius: 5px;
-    cursor: pointer;
-    user-select: none
-}
-
-.main #d7 .fragment .password ul li:active {
-    opacity: 0.7
-}
-
 .main #d8 .fragment {
-    color: #000;
-    background-color: #fff;
-    box-sizing: border-box;
-    width: 71vw;
-    padding: 22vh 17.5vw;
-    max-width: 100%;
-    font-size: 4vw;
-    letter-spacing: -.08em;
-    line-height: 1em
-}
-
-.main #d8 .fragment strong {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0);
-    font-weight: normal;
-    position: relative
-}
-
-.main #d8 .fragment strong:before {
-    content: '';
-    display: block;
-    background-color: #000;
-    z-index: -1;
+    background: #FFD7EB;
+    width: 80vw;
+    max-height: 560px;
     position: absolute;
-    top: .25em;
-    right: -.15em;
-    bottom: .05em;
-    left: -.07em
+    top: 0;
+    bottom: 0;
+    margin: auto;    
+    max-width: 1100px;
+}
+.main #d8 .fragment .content-wrapper {
+    padding: 1.25rem;
+}
+.main #d8 .fragment .content-wrapper p {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: 0;
+    margin-inline-end: 1em;
+}
+.main #d8 .fragment .content-wrapper .profiles-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+}
+.main #d8 .fragment .content-wrapper .profiles-list .profile-item {
+
+}
+.main #d8 .fragment .content-wrapper .profiles-list .profile-item h4.profile-name {
+    font-size: 1.875rem;
+}
+.main #d8 .fragment .content-wrapper .profiles-list .profile-item figure.profile-image {
+    margin: 0;
+}
+.wanted {
+    position: absolute;
+    left: -58px;
+    right: 0;
+    top: 0;
+    margin: auto;
+
+    font-family: 'PP Editorial New';
+    font-weight: 400;
+    font-size: 26.25rem;
+    line-height: 1;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -10px;
+    color: #FF644B;
+    mix-blend-mode: multiply;
 }
 
 .main #d9 .fragment {
     color: #000;
-    background-color: #f1d8d8;
     box-sizing: border-box;
-    width: 80vw;
-    padding: 10vh 0vw;
-    max-width: 100%
+    width: 100%;
+    height: 620px;
+    max-width: 1280px;
 }
-
-.main #d9 .fragment p {
+.main #d9 .fragment .subscribe {
+    background-color: #000;
+    color: white;
+    height: 50%;
+    padding: 1.25rem;
     text-align: center;
-    font-size: 4vw;
-    letter-spacing: -.08em;
-    line-height: 1em;
-    margin-bottom: 1em
 }
+.main #d9 .fragment .subscribe h1 {
+    font-size: 10rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #DCAF96;
+    line-height: 1;
+}
+.main #d9 .fragment .subscribe h2 {
+    font-size: 10rem;
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.main #d9 .fragment .subscribe input[type="email"] {
+    background-color: #DCAF96;
+    color: #000;
+    min-height: 3.125rem;
+    border: none;
+    border-radius: 25px;
+    font-family: 'PP Supply Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 458px;
+    padding: 0 15px;
+}
+.main #d9 .fragment .contact {
+    background: #DCAF96;
+    height: 50%;
+    padding: 1.25rem;
+}
+.main #d9 .fragment .contact h1, .main #d9 .fragment .contact h2 {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: right;
+}
+.main #d9 .fragment .contact h1 {
+    margin-bottom: 3rem;
+}
+.main #d9 .fragment .contact a {
+    text-decoration: none;
+}
+.main #d9 .fragment .contact .iso {
+    float: left;
+}
+.main #d9 .fragment .contact .content {
+    width: 34%;
+    float: right;
+    text-align: right;
+}
+/*  ----- */
 
-.main #d9 .fragment p span {
-    display: block;
-    font-size: 1vw;
-    letter-spacing: -.08em;
-    line-height: 1em;
-    margin-block-start: 0.8em
-}
 
-.main #d9 .fragment p:last-child {
-    margin-bottom: 0
-}
 
 .main #d10 .fragment {
     color: #000;
