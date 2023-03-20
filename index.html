@@ -20,6 +20,7 @@
     <script
         src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
     <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/functions.js"></script>
     <link href="css/montreal.css" rel="stylesheet">
     <link href="css/supply.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -33,7 +34,7 @@
                 <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#id9">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -94,22 +95,94 @@
             data-anchor-target="#d4">
                 <p>We <span 
                     data--14000-top="background-color:black;" 
-                    data--15000-top="background-color:transparent"
+                    data--14500-top="background-color:transparent;"
                     >footage to</span> make the best video moods,
-                    <span>We don't just steal any</span> <span>footage</span>.<br>
-                    <span>Only cinematographic</span> <span>gems</span>.</p>
+                    <span
+                    data--15000-top="background-color:black;" 
+                    data--15500-top="background-color:transparent"
+                    >We don't just steal any</span> <span 
+                    data--16000-top="background-color:black;" 
+                    data--16500-top="background-color:transparent">footage</span>.<br>
+                    <span data--17000-top="background-color:black;" 
+                    data--17500-top="background-color:transparent">Only cinematographic</span> <span
+                    data--18000-top="background-color:black;" 
+                    data--18500-top="background-color:transparent">gems</span>.</p>
             </div>
         </section>
 
         <section id="d5" class="slide goto">
-            <div class="fragment" 
-            data--14000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--15000-top="transform:translate(-50%, 0%)" 
+            <div class="fragment"
+            data--19000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--20000-top="transform:translate(-50%, 0%)" 
             data-anchor-target="#d5">
-                
+                <div class="black-box">
+                    <div class="black-box-left">
+                        <p>To enjoy our precious gallery, please enter your code.</p>
+                    </div>
+                    <div class="black-box-right">
+                        <div class="keyboard">
+                            <div class="key">1</div>
+                            <div class="key">2</div>
+                            <div class="key">3</div>
+                            <div class="key">4</div>
+                            <div class="key">5</div>
+                            <div class="key">6</div>
+                            <div class="key">7</div>
+                            <div class="key">8</div>
+                            <div class="key">9</div>
+                            <div class="key key-get-code"> Get<br>
+                                Code </div>
+                            <div class="key">0</div>
+                            <div class="key key-enter"> ⮠<br>
+                                Enter </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flash flash-incorrect">
+                    <p>Incorrect security code</p> 
+                    <div class="flash-buttons">
+                        <button id="showContact">GET CODE</button>
+                        <button id="closeFlash">OK</button>
+                    </div>
+                </div>
+                <div class="flash flash-loading">
+                    <p>Correct code!</p>  
+                    <div class="container">	
+                        <div class="Loading">
+                            <span data-charge='100'></span>
+                        </div>
+                    </div>
+                    <p>Loading Videos… <i>0%</i></p>
+                </div>
+                <div class="flash flash-contact flash-form">
+                    <p>Get your code.</p>
+                    <button class="close-form">Close</button>
+                    <div class="form-wrapper">
+                        <form name="requestCode">
+                            <div class="row-form">
+                                <input type="text" name="name" placeholder="Name *" class="text-field" required />
+                            </div>
+                            <div class="row-form">
+                                <input type="text" name="company" placeholder="Company" class="text-field" />
+                            </div>
+                            <div class="row-form">
+                                <input type="email" name="email" placeholder="Email *" class="text-field" required />
+                            </div>
+                            <div class="row-form">
+                                <textarea name="message" placeholder="Optional message" class="text-field" ></textarea>
+                            </div>
+                            <div class="row-form row-submit">
+                                <input type="submit" name="submit" value="Send" class="btn-submit" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
             </div>
 
         </section>
+
+
 
     </div>
 
@@ -151,12 +224,78 @@
             
         };
 
-        function progressBar() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-            document.getElementById("progressOval").style.marginLeft = scrolled + "%";
+
+        // Keyboard  functionality
+        $(".key-enter").click(function () {
+
+            // Complete this functionality to check for the code
+            isValidCode = true;
+
+            if (isValidCode) {
+                $(".flash.flash-loading").show();
+                loadingBar();
+            } else {
+                $('.flash.flash-incorrect').css('display', 'flex');
+            }
+        });
+
+        $("#closeFlash").click(function () {
+            $(".flash").hide();
+        });
+
+        $(".key-get-code").click(function () {
+            $(".flash.flash-contact").show();
+        });
+
+        $(".close-form").click(function () {
+            $(".flash-form").hide();
+        });
+
+        // Loading bar
+        const loadingBar = function () {
+
+            $('.Loading span').animate({
+                width: $('.Loading span').data('charge') + '%'
+            }, 1000);
+
+            var getCounter = parseInt($('.flash-loading i').text());
+
+            var MyCounter = setInterval(function () {
+                if (getCounter !== 101) {
+                    $('.flash-loading i').text(getCounter++ + '%');
+                } else {
+                    clearInterval(MyCounter);
+                    getCounter = 0;
+                    $('.flash-loading').hide();
+                };
+
+            }, 10);
+
+        };
+
+        // Video popup management
+        $('.video-thumb a').click(function (e) {
+            e.preventDefault();
+            var videoId = $(this).data('video-id');
+            $('#video').attr('src', 'https://player.vimeo.com/video/' + videoId + '?title=0&byline=0&portrait=0');
+            $('.video-popup').show();
+        });
+        $(' a.btn-close-popup').click(function (e) {
+            e.preventDefault();
+            $(this).closest('.video-popup').hide();
+            $('#video').attr('src', '');
+        });
+
+        //hand
+        $(".logo-cell").click(function () {
+            slidingHand();
+        });
+        const slidingHand = function () {
+
+            $('.hand').animate({
+                right: $('.hand').data('charge') + 'px'
+            }, 1000);
+
         }
         
     </script>

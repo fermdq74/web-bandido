@@ -20,6 +20,8 @@
     <script
         src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
     <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/functions.js"></script>
+    
     <link href="css/montreal.css" rel="stylesheet">
     <link href="css/supply.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -33,7 +35,7 @@
                 <ul>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#id9">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -150,15 +152,15 @@
                     <p>Get your code.</p>
                     <button class="close-form">Close</button>
                     <div class="form-wrapper">
-                        <form>
+                        <form name="requestCode">
                             <div class="row-form">
-                                <input type="text" name="name" placeholder="Name" class="text-field" />
+                                <input type="text" name="name" placeholder="Name *" class="text-field" required />
                             </div>
                             <div class="row-form">
                                 <input type="text" name="company" placeholder="Company" class="text-field" />
                             </div>
                             <div class="row-form">
-                                <input type="email" name="email" placeholder="Email" class="text-field" />
+                                <input type="email" name="email" placeholder="Email *" class="text-field" required />
                             </div>
                             <div class="row-form">
                                 <textarea name="message" placeholder="Optional message" class="text-field" ></textarea>
@@ -279,9 +281,9 @@
                     <div class="content">
                         <h1>Hands up!</h1>
                         <h2>Unless you want to subscribe to our newsletter</h2>
-                        <form>
-                            <input type="email" placeholder="Enter your Email">
-                            <input type="submit">
+                        <form name="subscribeForm">
+                            <input type="email" name="subscribeEmail" placeholder="Enter your Email" required>
+                            <button id="subscribeSubmit">→</button>
                         </form>
                     </div>
                 </div>
@@ -332,14 +334,6 @@
             }
             
         };
-
-        function progressBar() {
-            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrolled = (winScroll / height) * 100;
-            document.getElementById("progressBar").style.width = scrolled + "%";
-            document.getElementById("progressOval").style.marginLeft = scrolled + "%";
-        }
 
         // Keyboard  functionality
         $( ".key-enter" ).click(function() {
@@ -413,6 +407,7 @@
             }, 1000);
 
         }
+        
 
     </script>
 
