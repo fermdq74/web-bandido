@@ -723,6 +723,9 @@ button:hover, input[type="submit"]:hover {
     float: right;
 }
 
+.main #d6 {
+    display: none;
+}
 .main #d6 .fragment {
     background-color: #CDCDCD;
     position: absolute;
@@ -731,8 +734,11 @@ button:hover, input[type="submit"]:hover {
     bottom: 0;
     margin: auto;
     width: 90vw;
-    max-height: 600px;
+    /*max-height: 600px;*/
+    height: 80vh;
     margin: 20px;
+    /*position:fixed;
+    transform:translate(-50%, 24%);*/
 }
 
 .main #d6 .fragment .campaign, .main #d6 .fragment .agency {
@@ -748,6 +754,7 @@ button:hover, input[type="submit"]:hover {
 .video-list::-webkit-scrollbar {
     width: 24px;
     background-color: white;
+    outline: none;
 }
 .video-list::-webkit-scrollbar-track {
     background-color: white;
@@ -758,6 +765,7 @@ button:hover, input[type="submit"]:hover {
 .video-list::-webkit-scrollbar-thumb {
     background-color: #000;
     border-right: solid 20px #CDCDCD;
+    outline: none;
 }
 .video-items {
     max-width: 940px;
@@ -800,11 +808,11 @@ button:hover, input[type="submit"]:hover {
     cursor: pointer;
     text-decoration: underline;
 }
-
+/*
 .main #d7 .fragment {
     background: #C8F0F0;
-    width: 84vw;
-    max-height: 650px;
+    width: 90vw;
+    height: 86vh;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -813,7 +821,31 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d7 .fragment .content-wrapper {
     padding: 20px 45px;
+
 }
+*/
+.main #d7 .fragment {
+    width: 100vw;
+    height: 86vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;    
+}
+.main #d7 .fragment .content-wrapper {
+    padding: 20px 45px;
+    background: #C8F0F0;
+    width: 90vw;
+    height: 75vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;    
+    max-width: 1150px;
+}
+
 .main #d7 .fragment .content-wrapper p {
     font-size: 2.5rem;
     line-height: 1.1;
@@ -829,7 +861,7 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d7 .fragment .content-wrapper .clients .logo-cell {
     background-color: white;
-    width: 120px;
+    width: 29%;
     height: 74px;
     display: flex;
     align-items: center;
@@ -853,8 +885,10 @@ button:hover, input[type="submit"]:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -70%;
-    margin: auto;
+    right: -100%;
+    margin: 0;
+    cursor: pointer;
+    max-height: 335px;
 }
 
 .main #d8 .fragment {

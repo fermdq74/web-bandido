@@ -57,6 +57,10 @@
         </div>
     </div>
     <div id="main" class="main">
+        <div class="video-popup">
+            <a href="/" class="btn-close-popup">Close</a>
+            <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <section id="d1" class="slide goto" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
             <div class="fragment">
                 <h2 class="claim">
@@ -83,35 +87,35 @@
         <section id="d3" class="slide goto">
             <div class="fragment" data-start="position:relative;"
             data--10000-top="position:fixed;transform:translate(-50%, 100%)" 
-            data--11000-top="transform:translate(-50%, 0%)" 
+            data--10500-top="transform:translate(-50%, 0%)" 
             data-anchor-target="#d3">
             </div>
         </section>
 
         <section id="d4" class="slide goto">
             <div class="fragment" 
-            data--12000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--13000-top="transform:translate(-50%, 0%)" 
+            data--11000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--12000-top="transform:translate(-50%, 0%)" 
             data-anchor-target="#d4">
                 <p>We <span 
-                    data--14000-top="background-color:black;" 
-                    data--14500-top="background-color:transparent;"
+                    data--13000-top="background-color:black;color:#000;" 
+                    data--13500-top="background-color:transparent;color:#9191EC;"
                     >footage to</span> make the best video moods,
                     <span
-                    data--15000-top="background-color:black;" 
-                    data--15500-top="background-color:transparent"
+                    data--14000-top="background-color:black;color:#000;" 
+                    data--14500-top="background-color:transparent;color:#9191EC;"
                     >We don't just steal any</span> <span 
-                    data--16000-top="background-color:black;" 
-                    data--16500-top="background-color:transparent">footage</span>.<br>
-                    <span data--17000-top="background-color:black;" 
-                    data--17500-top="background-color:transparent">Only cinematographic</span> <span
-                    data--18000-top="background-color:black;" 
-                    data--18500-top="background-color:transparent">gems</span>.</p>
+                    data--15000-top="background-color:black;color:#000;" 
+                    data--15500-top="background-color:transparent;color:#9191EC;">footage</span>.<br>
+                    <span data--16000-top="background-color:black;color:#000;" 
+                    data--16500-top="background-color:transparent;color:#9191EC;">Only cinematographic</span> <span
+                    data--17000-top="background-color:black;color:#000;" 
+                    data--17500-top="background-color:transparent;color:#9191EC;">gems</span>.</p>
             </div>
         </section>
 
         <section id="d5" class="slide goto">
-            <div class="fragment"
+            <div class="fragment" 
             data--19000-top="position:fixed;transform:translate(-50%, 100vw);" 
             data--20000-top="transform:translate(-50%, 0%)" 
             data-anchor-target="#d5">
@@ -141,7 +145,7 @@
                 <div class="flash flash-incorrect">
                     <p>Incorrect security code</p> 
                     <div class="flash-buttons">
-                        <button id="showContact">GET CODE</button>
+                        <button id="showContact" class="key-get-code">GET CODE</button>
                         <button id="closeFlash">OK</button>
                     </div>
                 </div>
@@ -182,7 +186,83 @@
 
         </section>
 
+        <section id="d6" class="slide goto">
+            <div class="fragment" data--19000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--20000-top="top: 50%;left: 50%;transform: translate(-50%, -50%);" 
+            data-anchor-target="#d6">
 
+                <div class="video-list">
+
+                    <div class="campaign">Coca Cola → Tenderos</div>
+                    <div class="agency">Agency → Bla Bla</div>
+                    
+                    <div class="video-items">
+                        <div class="video-card">
+                            <div class="video-title">Video Mood</div>
+                            <div class="video-thumb"><a href="/" data-video-id="799104662"><img src="images/video-thumb-1.jpg"></a></div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Advert</div>
+                            <div class="video-thumb"><a href="/" data-video-id="797806367"><img src="images/video-thumb-2.jpg"></a></div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Video Mood</div>
+                            <div class="video-thumb"><a href="/" data-video-id="796583362"><img src="images/video-thumb-1.jpg"></a></div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-title">Advert</div>
+                            <div class="video-thumb"><a href="/" data-video-id="804672860"><img src="images/video-thumb-2.jpg"></a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="d7" class="slide goto">
+            <div class="fragment" 
+            data--21000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--22000-top="transform:translate(-50%, 0%)" 
+            data-anchor-target="#d7">
+                <div class="content-wrapper">
+                    <p>We are wanted by the best<br >
+                        brands, ad agencies<br>
+                        and Interpol.</p>
+                        <div class="clients">
+                            <div class="clients-left-column">
+                                <h4>Brands</h4>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                            </div>
+                            <div class="clients-right-column">
+                                <h4>Agencies</h4>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"> Logo </div>
+                            </div>
+                        </div>
+                        <div class="hand"><img src="images/hand-with-diamond.svg"></div>
+                </div>
+                
+            </div>            
+        </section>
 
     </div>
 
@@ -244,6 +324,7 @@
         });
 
         $(".key-get-code").click(function () {
+            $(".flash").hide();
             $(".flash.flash-contact").show();
         });
 
@@ -267,6 +348,8 @@
                     clearInterval(MyCounter);
                     getCounter = 0;
                     $('.flash-loading').hide();
+                    $('#d5').hide();
+                    $('#d6').show();
                 };
 
             }, 10);
@@ -288,12 +371,15 @@
 
         //hand
         $(".logo-cell").click(function () {
-            slidingHand();
+            //$( this ).css( 'visibility', 'hidden');
+            var position = $( this ).position();
+            slidingHand( position.top, position.left );
+            $( this ).find( 'img' ).attr( 'src', 'images/diamond.svg');
         });
-        const slidingHand = function () {
-
+        const slidingHand = function ( distanceTop, distanceLeft ) {
             $('.hand').animate({
-                right: $('.hand').data('charge') + 'px'
+                left: distanceLeft - 153 + 'px',
+                top: distanceTop + 80 - $( '.hand' ).height() + 'px'
             }, 1000);
 
         }
