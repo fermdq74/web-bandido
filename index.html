@@ -235,27 +235,27 @@
                         <div class="clients">
                             <div class="clients-left-column">
                                 <h4>Brands</h4>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                             </div>
                             <div class="clients-right-column">
                                 <h4>Agencies</h4>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
-                                <div class="logo-cell"> Logo </div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                             </div>
                         </div>
                         <div class="hand"><img src="images/hand-with-diamond.svg"></div>
@@ -370,11 +370,11 @@
         });
 
         //hand
-        $(".logo-cell").click(function () {
+        $(".logo-cell img").click(function () {
             //$( this ).css( 'visibility', 'hidden');
             var position = $( this ).position();
             slidingHand( position.top, position.left );
-            $( this ).find( 'img' ).attr( 'src', 'images/diamond.svg');
+            $( this ).attr( 'src', 'images/diamond.svg');
         });
         const slidingHand = function ( distanceTop, distanceLeft ) {
             $('.hand').animate({

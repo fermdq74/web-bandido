@@ -860,7 +860,7 @@ button:hover, input[type="submit"]:hover {
     margin-bottom: 1.25rem;
 }
 .main #d7 .fragment .content-wrapper .clients .logo-cell {
-    background-color: white;
+    background-color: #F5F5F5;
     width: 29%;
     height: 74px;
     display: flex;
@@ -868,6 +868,7 @@ button:hover, input[type="submit"]:hover {
     justify-content: center;
     margin-bottom: 20px;
     float: left;
+    cursor: pointer;
 }
 .main #d7 .fragment .content-wrapper .clients .logo-cell:nth-child(3n+3) {
     margin-left: 20px;
