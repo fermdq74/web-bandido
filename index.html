@@ -372,15 +372,22 @@
         //hand
         $(".logo-cell img").click(function () {
             //$( this ).css( 'visibility', 'hidden');
+            var logoItem = $( this );
+            console.log(logoItem, "callback");
             var position = $( this ).position();
-            slidingHand( position.top, position.left );
-            $( this ).attr( 'src', 'images/diamond.svg');
+            slidingHand( position.top, position.left, function( logoItem ) {
+                //function2(someOtherVariable);
+                //logoItem.attr( 'src', 'images/diamond.svg');
+                console.log(logoItem, "callback");
+            });
+            //$( this ).attr( 'src', 'images/diamond.svg');
         });
-        const slidingHand = function ( distanceTop, distanceLeft ) {
+        const slidingHand = function ( distanceTop, distanceLeft, callback ) {
             $('.hand').animate({
                 left: distanceLeft - 153 + 'px',
                 top: distanceTop + 80 - $( '.hand' ).height() + 'px'
             }, 1000);
+            callback();
 
         }
         

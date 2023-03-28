@@ -1,10 +1,10 @@
-<svg width="1088" height="335" viewBox="0 0 1088 335" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M215.912 280.197L222.993 267.924H265.477L272.558 280.197H215.912Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M215.912 280.197L222.993 267.924H265.477L272.558 280.197H215.912Z" stroke="#C8F0F0" stroke-width="1.285"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M244.235 329.29L215.912 280.197H272.558L244.235 329.29Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M244.235 329.29L215.912 280.197H272.558L244.235 329.29Z" stroke="#C8F0F0" stroke-width="1.285"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M230.074 280.197L233.614 267.924H254.856L258.397 280.197H230.074Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M230.074 280.197L233.614 267.924H254.856L258.397 280.197H230.074Z" stroke="#C8F0F0" stroke-width="1.285"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M244.235 329.29L230.074 280.197H258.397L244.235 329.29Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M244.235 329.29L230.074 280.197H258.397L244.235 329.29Z" stroke="#C8F0F0" stroke-width="1.285"/>
+<svg width="59" height="65" viewBox="0 0 59 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.273L9.081 1H51.565L58.646 13.273H2Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 13.273L9.081 1H51.565L58.646 13.273H2Z" stroke="#C8F0F0" stroke-width="1.285"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.323 62.3664L2 13.2734H58.646L30.323 62.3664Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.323 62.3664L2 13.2734H58.646L30.323 62.3664Z" stroke="#C8F0F0" stroke-width="1.285"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1621 13.273L19.7021 1H40.9441L44.4851 13.273H16.1621Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1621 13.273L19.7021 1H40.9441L44.4851 13.273H16.1621Z" stroke="#C8F0F0" stroke-width="1.285"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.3231 62.3664L16.1621 13.2734H44.4851L30.3231 62.3664Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30.3231 62.3664L16.1621 13.2734H44.4851L30.3231 62.3664Z" stroke="#C8F0F0" stroke-width="1.285"/>
 </svg>
