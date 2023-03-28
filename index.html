@@ -264,6 +264,69 @@
             </div>            
         </section>
 
+        <section id="d8" class="slide goto">
+            <div class="fragment"
+            data--22000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--23000-top="transform:translate(-50%, 0%)" 
+            data-anchor-target="#d8">
+                <div class="content-wrapper">
+                    <p>Masters in the art of editing and stealing cinematic gems, these are the latest photographs taken from the skilled group of editors.</p>
+                    <div class="profiles-list">
+                        <div class="profile-item">
+                            <figure class="profile-image"><img src="images/catalina.png"></figure>
+                            <h4 class="profile-name">Catalina<br />
+                                Gorosterrazu</h4>    
+                        </div>
+                        <div class="profile-item">
+                            <figure class="profile-image"><img src="images/jorge.png"></figure>
+                            <h4 class="profile-name">Jorge<br />
+                                Yúdice</h4>    
+                        </div>
+                        <div class="profile-item">
+                            <figure class="profile-image"><img src="images/nestor.png"></figure>
+                            <h4 class="profile-name">Néstor<br />
+                                Ruano</h4>    
+                        </div>
+                    </div>
+                </div>
+                <div class="wanted" 
+                data--23000-top="opacity:0" 
+                data--24000-top="opacity:1" 
+                data-anchor-target="#d8"
+                >Wanted</div>
+            </div>
+        </section>
+
+        <section id="d9" class="slide goto">
+            <div class="fragment" 
+            data--24000-top="position:fixed;transform:translate(-50%, 100vw);" 
+            data--25000-top="transform:translate(-50%, -5%)" 
+            data-anchor-target="#d9">
+
+                <div class="subscribe">
+                    <div class="content">
+                        <h1>Hands up!</h1>
+                        <h2>Unless you want to subscribe to our newsletter</h2>
+                        <form name="subscribeForm">
+                            <input type="email" name="subscribeEmail" placeholder="Enter your Email" required>
+                            <button id="subscribeSubmit">→</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="iso">
+                        <img alt="" src="images/iso-logo.svg" aria-hidden="true" />
+                    </div>
+                    <div class="content">
+                        <h1>Contact Us</h1>
+                        <h2><a href="mailto:hola@bandido.com">hola@bandido.com</a>
+                            <a href="tel:+34627231754">+34 647 380 731</a></h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 
     <script>
@@ -369,26 +432,28 @@
             $('#video').attr('src', '');
         });
 
-        //hand
+        // hand animations
         $(".logo-cell img").click(function () {
-            //$( this ).css( 'visibility', 'hidden');
             var logoItem = $( this );
-            console.log(logoItem, "callback");
             var position = $( this ).position();
-            slidingHand( position.top, position.left, function( logoItem ) {
-                //function2(someOtherVariable);
-                //logoItem.attr( 'src', 'images/diamond.svg');
-                console.log(logoItem, "callback");
-            });
-            //$( this ).attr( 'src', 'images/diamond.svg');
+            slidingHand( position.top, position.left, logoItem);
         });
-        const slidingHand = function ( distanceTop, distanceLeft, callback ) {
+        const slidingHand = function ( distanceTop, distanceLeft, logoItem ) {
             $('.hand').animate({
-                left: distanceLeft - 153 + 'px',
-                top: distanceTop + 80 - $( '.hand' ).height() + 'px'
+                left: distanceLeft - 173 + 'px',
+                top: distanceTop + 70 - $( '.hand' ).height() + 'px'
+            }, {
+                duration: 1000, 
+                complete: function () {
+                    console.log( logoItem );
+                    $( logoItem ).attr( 'src', 'images/diamond.svg' );
+                    $( logoItem ).parent().css( 'background-color', 'transparent' );
+                    $( '.hand').find( 'img' ).attr( 'src', 'images/hand.svg' );
+                }
+            });
+            $( '.hand' ).animate({
+                left: '150%'
             }, 1000);
-            callback();
-
         }
         
     </script>
