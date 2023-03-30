@@ -32,9 +32,9 @@
             <h1 class="title"><a href="/"><img src="images/logo.svg" alt="Bandido"></a></h1>
             <nav>
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#id9">Contact</a></li>
+                    <li><a id="menuAbout" href="#d2" data-menu-top="3000">About</a></li>
+                    <li><a id="menuProjects" href="#d5" data-menu-top="12500">Projects</a></li>
+                    <li><a id="menuContact" href="#d9" data-menu-top="24000">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -74,7 +74,7 @@
                 data-300-top="position:fixed;" data--5000-top="position:fixed;transform:translate(-50%,-50%)" 
                 data--7000-top="transform:translate(-200%,-50%)" 
                 data-anchor-target="#d2">
-                <h2 class="claim2">The Most Wanted Video Mood Makers</h2>
+                <h2 id="msg" class="claim2">The Most Wanted Video Mood Makers</h2>
             </div>
             <div class="fragment2" data-start="position:relative;"
                 data--5000-top="position:fixed;transform:translate(50%,-50%)" 
@@ -125,15 +125,15 @@
                     </div>
                     <div class="black-box-right">
                         <div class="keyboard">
-                            <div class="key">1</div>
-                            <div class="key">2</div>
-                            <div class="key">3</div>
-                            <div class="key">4</div>
-                            <div class="key">5</div>
-                            <div class="key">6</div>
-                            <div class="key">7</div>
-                            <div class="key">8</div>
-                            <div class="key">9</div>
+                            <div class="key number">1</div>
+                            <div class="key number">2</div>
+                            <div class="key number">3</div>
+                            <div class="key number">4</div>
+                            <div class="key number">5</div>
+                            <div class="key number">6</div>
+                            <div class="key number">7</div>
+                            <div class="key number">8</div>
+                            <div class="key number">9</div>
                             <div class="key key-get-code"> Get<br>
                                 Code </div>
                             <div class="key">0</div>
@@ -342,14 +342,14 @@
         window.onscroll = function () { 
             progressBar();
            
-            console.log( $(window).scrollTop(), elementPosition1 );
+            //console.log( $(window).scrollTop(), elementPosition1 );
 
             // Display 2nd slide
             if ( $(window).scrollTop() > elementPosition1 ) {
                 
                 $('header').show(400);
                 
-                let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * (letter.length * 2);
+                let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * (letter.length * 5);
                 console.log(scrolled);
                 
                 letter.forEach(function(l, i) {
@@ -367,12 +367,20 @@
             
         };
 
-
         // Keyboard  functionality
+        var code = '';
+        var isValidCode = false;
+
+        $(".key.number").click(function () {
+            code = code + $( this ).html();
+        });
+
         $(".key-enter").click(function () {
 
             // Complete this functionality to check for the code
-            isValidCode = true;
+            if ( code == '456' ) {
+                isValidCode = true;
+            }
 
             if (isValidCode) {
                 $(".flash.flash-loading").show();
@@ -380,6 +388,8 @@
             } else {
                 $('.flash.flash-incorrect').css('display', 'flex');
             }
+
+            code = '';
         });
 
         $("#closeFlash").click(function () {
@@ -459,13 +469,56 @@
     </script>
 
     <script type="text/javascript" src="skrollr.min.js"></script>
+    <script type="text/javascript" src="skrollr.menu.min.js"></script>
     <script type="text/javascript">
         var s = skrollr.init({
             constants: {
                 //fill the box for a "duration" of 150% of the viewport (pause for 150%)
                 //adjust for shorter/longer pause
-                box: '200p'
+                box: '150p'
             }
+        });
+        //The options (second parameter) are all optional. The values shown are the default values.
+        skrollr.menu.init(s, {
+            //skrollr will smoothly animate to the new position using `animateTo`.
+            animate: true,
+        
+            //The easing function to use.
+            easing: 'sqrt',
+        
+            //Multiply your data-[offset] values so they match those set in skrollr.init
+            scale: 2,
+        
+            //How long the animation should take in ms.
+            duration: function(currentTop, targetTop) {
+                //By default, the duration is hardcoded at 500ms.
+                return 500;
+        
+                //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
+                //return Math.abs(currentTop - targetTop) * 10;
+            },
+        
+            //If you pass a handleLink function you'll disable `data-menu-top` and `data-menu-offset`.
+            //You are in control where skrollr will scroll to. You get the clicked link as a parameter and are expected to return a number.
+            /*handleLink: function(link) {
+                return 24000;//Hardcoding 400 doesn't make much sense.
+            },*/
+        
+            //By default skrollr-menu will only react to links whose href attribute contains a hash and nothing more, e.g. `href="#foo"`.
+            //If you enable `complexLinks`, skrollr-menu also reacts to absolute and relative URLs which have a hash part.
+            //The following will all work (if the user is on the correct page):
+            //http://example.com/currentPage/#foo
+            //http://example.com/currentDir/currentPage.html?foo=bar#foo
+            ///?foo=bar#foo
+            complexLinks: false,
+        
+            //This event is triggered right before we jump/animate to a new hash.
+            change: function(newHash, newTopPosition) {
+                //Do stuff
+            },
+        
+            //Add hash link (e.g. `#foo`) to URL or not.
+            updateUrl: false //defaults to `true`.
         });
         if (s.isMobile()) {
           s.destroy();

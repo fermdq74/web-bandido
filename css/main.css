@@ -169,7 +169,7 @@ body {
     box-sizing: border-box;
     scrollbar-width: none;
     overflow-x: hidden;
-    cursor: url('../images/mouse.svg'),auto;
+    cursor: url('../images/mouse.svg') 25 15,auto;
     height: 100%;
 }
 
