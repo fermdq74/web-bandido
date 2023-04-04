@@ -169,7 +169,6 @@ body {
     box-sizing: border-box;
     scrollbar-width: none;
     overflow-x: hidden;
-    cursor: url('../images/mouse.svg') 25 15,auto;
     height: 100%;
 }
 
@@ -209,10 +208,16 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 0 0.625rem;
-    cursor: inherit;
+    position: relative;
 }
-nav ul li a:hover {
-    color: #fff;
+nav ul li a:hover::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0%;
+    height: 100%;
+    width: 100%;
     background-color: #000;
 }
 
@@ -250,7 +255,6 @@ nav ul li a:hover {
 
 .fixed header a {
     text-decoration: none;
-    cursor: inherit;
 }
 
 .fixed header h1.title {
@@ -385,7 +389,8 @@ nav ul li a:hover {
     width: 100vw;
     padding: 0vh 0vw;
     max-width: 100%;
-    height: 100vh
+    height: 100vh;
+    top: calc(50% - 10vh);
 }
 
 .main #d1 .fragment h2.claim {
@@ -426,13 +431,14 @@ nav ul li a:hover {
 }
 
 .main #d2 .fragment {
+    display: flex;
     color: #DDAF94;
     background-color: #FFD7EB;
     box-sizing: border-box;
-    width: 70vw;
+    width: 90vw;
+    min-height: 544px;
     padding: 2vh 2.7vw;
-    width: 1060px;
-    word-break: break-all;
+    /*word-break: break-all;*/
 }
 
 .main #d2 .fragment h2.claim2 {
@@ -441,6 +447,8 @@ nav ul li a:hover {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    align-self: center;
 }
 .main #d2 .fragment h2.claim2 span {
     opacity: 0;
