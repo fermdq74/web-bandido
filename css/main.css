@@ -242,7 +242,6 @@ nav ul li a:hover::after {
     height: 100vh;
     width: 100vw;
     z-index: 99999;
-    pointer-events: none
 }
 
 .fixed header {
@@ -303,7 +302,13 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     width: 24px;
-    height: 100px;    
+    height: 100px;
+    z-index: 99999;
+}
+.scroller a {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .progress-container {
@@ -482,8 +487,8 @@ nav ul li a:hover::after {
     position: absolute;
     /*left: 5%;
     right: 5%;*/
-    top: 9.68%;
-    bottom: 9.68%;
+    /*top: 9.68%;
+    bottom: 9.68%;*/
     width: 90vw;
     background: #1E001E;
     max-height: 400px;
@@ -495,8 +500,8 @@ nav ul li a:hover::after {
     background-color: #CDCDCD;
     position: absolute;
     /*display: none;*/
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;
     width: 66vw;
     max-width: 938px;
@@ -529,8 +534,8 @@ nav ul li a:hover::after {
     background-color: #CDCDCD;
     position: absolute;
     /*display: none;*/
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;
     width: 66vw;
     max-width: 938px;
@@ -738,8 +743,8 @@ button:hover, input[type="submit"]:hover {
     background-color: #CDCDCD;
     position: absolute;
     /*display: none;*/
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;
     width: 90vw;
     /*max-height: 600px;*/
@@ -834,10 +839,10 @@ button:hover, input[type="submit"]:hover {
 */
 .main #d7 .fragment {
     width: 100vw;
-    height: 86vh;
+    /*height: 86vh;*/
     position: absolute;
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;    
 }
 .main #d7 .fragment .content-wrapper {
@@ -905,8 +910,8 @@ button:hover, input[type="submit"]:hover {
     width: 86vw;
     max-height: 660px;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;    
 }
 .main #d8 .fragment .content-wrapper {
@@ -957,8 +962,8 @@ button:hover, input[type="submit"]:hover {
     width: 90vw;
     height: 74vh;
     /*max-width: 1280px;*/
-    top: 0;
-    bottom: 0;
+    /*top: 0;
+    bottom: 0;*/
     margin: auto;
 }
 .main #d9 .fragment .subscribe {
