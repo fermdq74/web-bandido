@@ -24,28 +24,24 @@
     <link href="css/montreal.css" rel="stylesheet">
     <link href="css/supply.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
     <div class="fixed">
         <header>
-            <h1 class="title"><a href="/"><img src="images/logo.svg" alt="Bandido"></a></h1>
+            <h1 class="title"><a id="menuHome" href="#d1"><img src="images/logo.svg" alt="Bandido"></a></h1>
             <nav>
                 <ul>
-                    <li><a id="menuAbout" href="#d2" data-menu-top="3000">About</a></li>
-                    <li><a id="menuProjects" href="#d5" data-menu-top="12500">Projects</a></li>
-                    <li><a id="menuContact" href="#d9" data-menu-top="24000">Contact</a></li>
+                    <li><a id="menuAbout" href="#d2">About</a></li>
+                    <li><a id="menuProjects" href="#d5">Projects</a></li>
+                    <li><a id="menuContact" href="#d9">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <footer>
             <div class="hidden"></div>
         </footer>
-        <div class="scroller">
-            <a id="scrollUp" href="#"><img src="images/arrow-up.svg"></a>
-            <a id="scrollDown" href="#"><img src="images/arrow-down.svg"></a>
-        </div>
         <div class="rotate" aria-valuetext="Please, rotate your smartphone">
             <img alt="Rotate your smartphone" src="images/rotate-smartphone.svg" />
             <div class="credits" aria-hidden="true">
@@ -54,12 +50,16 @@
             </div>
         </div>
     </div>
+    <div class="scroller">
+        <a id="scrollUp"><img src="images/arrow-up.svg"></a>
+        <a id="scrollDown"><img src="images/arrow-down.svg"></a>
+    </div>
     <div id="main" class="main">
         <div class="video-popup">
             <a href="/" class="btn-close-popup">Close</a>
             <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <section id="d1" class="slide goto" data-0="transform:translate(0,0%);" data-100p="transform:translate(0,-100%);">
+        <section id="d1" class="slide goto">
             <div class="fragment">
                 <h2 class="claim">
                     <div>We are</div>
@@ -68,58 +68,29 @@
             </div>
         </section>
         <section id="d2" class="slide goto" >
-            <div class="fragment" data-start="position:relative;" 
-                data-300-top="position:fixed;" data--5000-top="position:fixed;transform:translate(-50%,-50%)" 
-                data--7000-top="transform:translate(-200%,-50%)" 
-                data-anchor-target="#d2">
-                <h2 class="claim2 wow bounceInUp">The Most Wanted Video Mood Makers</h2>
+            <div class="fragment">
+                <h2 class="claim2" data-aos="zoom-in" data-aos-duration="1000">The Most Wanted Video Mood Makers</h2>
             </div>
-            <div class="fragment2" data-start="position:relative;"
-                data--5000-top="position:fixed;transform:translate(50%,-50%)" 
-                data--10000-top="transform:translate(-230%,-50%)" 
-                data-anchor-target="#d2">
+            <div class="fragment2">
                 <h2 class="claim3">We are cinematic gems Thieves</h2>
             </div>
         </section>
 
-        <section id="d3" class="slide goto">
-            <div class="fragment" data-start="position:relative;"
-            data--10000-top="position:fixed;transform:translate(-50%, 100%)" 
-            data--10500-top="transform:translate(-50%, 0%)" 
-            data-anchor-target="#d3">
-            </div>
-        </section>
-
         <section id="d4" class="slide goto">
-            <div class="fragment" 
-            data--11000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--12000-top="transform:translate(-50%, 0%)" 
-            data-anchor-target="#d4">
-                <p>We <span 
-                    data--13000-top="background-color:black;color:#000;" 
-                    data--13500-top="background-color:transparent;color:#9191EC;"
-                    >footage to</span> make the best video moods,
-                    <span
-                    data--14000-top="background-color:black;color:#000;" 
-                    data--14500-top="background-color:transparent;color:#9191EC;"
-                    >We don't just steal any</span> <span 
-                    data--15000-top="background-color:black;color:#000;" 
-                    data--15500-top="background-color:transparent;color:#9191EC;">footage</span>.<br>
-                    <span data--16000-top="background-color:black;color:#000;" 
-                    data--16500-top="background-color:transparent;color:#9191EC;">Only cinematographic</span> <span
-                    data--17000-top="background-color:black;color:#000;" 
-                    data--17500-top="background-color:transparent;color:#9191EC;">gems</span>.</p>
+            <div class="fragment" >
+                <p>We <span>steal footage from others to</span> make the best mood films.<br />
+                    <span>(Copyright laws can be broken for a little while)</span><br />
+                    We will ride like Bandidos <span>across the <br />
+                    internet until we find the perfect image for the project.</span></p>
             </div>
         </section>
 
         <section id="d5" class="slide goto">
-            <div class="fragment" 
-            data--19000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--20000-top="transform:translate(-50%, 0%)" 
-            data-anchor-target="#d5">
+            <div class="fragment">
                 <div class="black-box">
                     <div class="black-box-left">
                         <p>To enjoy our precious gallery, please enter your code.</p>
+                        <input type="password" class="password input-field">
                     </div>
                     <div class="black-box-right">
                         <div class="keyboard">
@@ -185,9 +156,7 @@
         </section>
 
         <section id="d6" class="slide goto">
-            <div class="fragment" data--19000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--20000-top="top: 50%;left: 50%;transform: translate(-50%, -50%);" 
-            data-anchor-target="#d6">
+            <div class="fragment">
 
                 <div class="video-list">
 
@@ -222,10 +191,7 @@
         </section>
 
         <section id="d7" class="slide goto">
-            <div class="fragment" 
-            data--21000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--22000-top="transform:translate(-50%, 0%)" 
-            data-anchor-target="#d7">
+            <div class="fragment">
                 <div class="content-wrapper">
                     <p>We are wanted by the best<br >
                         brands, ad agencies<br>
@@ -238,7 +204,7 @@
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
-                                <div class="logo-cell"><img src="images/logo-agencia.png"></div>
+                                <div class="logo-cell" style="background-color: transparent;"><img src="images/diamond.svg"></div>
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
@@ -256,17 +222,14 @@
                                 <div class="logo-cell"><img src="images/logo-agencia.png"></div>
                             </div>
                         </div>
-                        <div class="hand"><img src="images/hand-with-diamond.svg"></div>
+                        <div class="hand"><img src="images/hand.svg"></div>
                 </div>
                 
             </div>            
         </section>
 
         <section id="d8" class="slide goto">
-            <div class="fragment"
-            data--22000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--23000-top="transform:translate(-50%, 0%)" 
-            data-anchor-target="#d8">
+            <div class="fragment">
                 <div class="content-wrapper">
                     <p>Masters in the art of editing and stealing cinematic gems, these are the latest photographs taken from the skilled group of editors.</p>
                     <div class="profiles-list">
@@ -287,19 +250,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="wanted" 
-                data--23000-top="opacity:0" 
-                data--24000-top="opacity:1" 
-                data-anchor-target="#d8"
-                >Wanted</div>
+                <div class="wanted">Wanted</div>
             </div>
         </section>
 
         <section id="d9" class="slide goto">
-            <div class="fragment" 
-            data--24000-top="position:fixed;transform:translate(-50%, 100vw);" 
-            data--25000-top="transform:translate(-50%, -5%)" 
-            data-anchor-target="#d9">
+            <div class="fragment">
 
                 <div class="subscribe">
                     <div class="content">
@@ -335,22 +291,20 @@
         window.onscroll = function () { 
           
             // Display 2nd slide
-            if ( $(window).scrollTop() > elementPosition1 ) {
+            if ( $(window).scrollTop() > 0 ) {
                 
                 $('header').show(400);
 
             } else {
                 $('header').hide(400);
             }
+
+            if ( $(window).scrollTop() > 3844 ) {
+                //console.log( $('#d7').offset().top );
+                //$( '.clients-left-column .logo-cell:nth-child(6) img' ).click();
+            }
             
         };
-
-        $( document ).click(function() {
-            console.log("click", $(this));
-            $('html,body').animate({
-                scrollTop: $(document).next(".goto").top
-            }, 'slow');
-        });
 
         // Keyboard  functionality
         var code = '';
@@ -358,6 +312,7 @@
 
         $(".key.number").click(function () {
             code = code + $( this ).html();
+            $(".password").val( code);
         });
 
         $(".key-enter").click(function () {
@@ -441,22 +396,53 @@
                 duration: 1000, 
                 complete: function () {
                     console.log( logoItem );
-                    $( logoItem ).attr( 'src', 'images/diamond.svg' );
+                    //$( logoItem ).attr( 'src', 'images/diamond.svg' );
+                    $( logoItem ).remove();
                     $( logoItem ).parent().css( 'background-color', 'transparent' );
-                    $( '.hand').find( 'img' ).attr( 'src', 'images/hand.svg' );
+                    $( '.hand').find( 'img' ).attr( 'src', 'images/hand-with-diamond.svg' );
                 }
             });
             $( '.hand' ).animate({
                 left: '150%'
             }, 1000);
         }
+
+        // -- USER SCROLL --
+        var windowHeight = $(window).height();
+        var aboutDistance = $('#d2').offset().top;
+        var projectsDistance = $('#d5').offset().top;
+        var contactDistance = $('#d9').offset().top;
+        // -- ARROWS --
+        $('#scrollUp').on('click', function() {
+            var y = $(window).scrollTop(); // current page position
+            $(window).scrollTop(y - windowHeight); // scroll up 150px
+        });
+        $('#scrollDown').on('click', function() {
+            var y = $(window).scrollTop(); // current page position
+            $(window).scrollTop(y + windowHeight); // scroll down 150px
+        });
+        // -- MENU --
+        $('#menuAbout').on('click', function(e) {
+            e.preventDefault();
+            window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuProjects').on('click', function(e) {
+            e.preventDefault();
+            window.scroll({ top: projectsDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuContact').on('click', function(e) {
+            e.preventDefault();
+            window.scroll({ top: contactDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuHome').on('click', function(e) {
+            e.preventDefault();
+            window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        });
         
     </script>
-
-
-    <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        new WOW().init();
+      AOS.init();
     </script>
 
 </body>
