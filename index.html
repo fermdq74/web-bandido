@@ -90,7 +90,7 @@
                 <div class="black-box">
                     <div class="black-box-left">
                         <p>To enjoy our precious gallery, please enter your code.</p>
-                        <input type="password" class="password input-field">
+                        <input type="password" class="password input-field" placeholder="***">
                     </div>
                     <div class="black-box-right">
                         <div class="keyboard">
@@ -236,21 +236,25 @@
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/catalina.png"></figure>
                             <h4 class="profile-name">Catalina<br />
-                                Gorosterrazu</h4>    
+                                Gorosterrazu</h4>
+                            <div class="profile-bio">This is my small bio</div>
                         </div>
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/jorge.png"></figure>
                             <h4 class="profile-name">Jorge<br />
-                                Yúdice</h4>    
+                                Yúdice</h4>
+                            <div class="profile-bio">This is my small bio</div>
                         </div>
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/nestor.png"></figure>
                             <h4 class="profile-name">Néstor<br />
                                 Ruano</h4>    
+                            <div class="profile-bio">This is my small bio</div>
                         </div>
                     </div>
                 </div>
-                <div class="wanted">Wanted</div>
+                <div class="wanted" data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom" data-aos-delay="50">Wanted</div>
             </div>
         </section>
 
@@ -287,24 +291,56 @@
         // slides positions
         var elementPosition1 = $('#d1').position().top + $('#d1').height();
         var elementPosition2 = $('#d2').position().top + $('#d2').height();
+        
+        const d1 = document.querySelector('#d1');
+        const d2 = document.querySelector('#d2');
+        const d7 = document.querySelector('#d7');
+        var handDisplayed = false;
 
-        window.onscroll = function () { 
-          
-            // Display 2nd slide
-            if ( $(window).scrollTop() > 0 ) {
-                
-                $('header').show(400);
+        document.addEventListener('scroll', function () {
 
+            // display logo and menu
+            if ( $(window).scrollTop() > 0 ) {                
+                $('header').show(400);  
+                //$('#d1').hide(400);
             } else {
                 $('header').hide(400);
+                //$('#d1').show(400);
             }
 
-            if ( $(window).scrollTop() > 3844 ) {
-                //console.log( $('#d7').offset().top );
-                //$( '.clients-left-column .logo-cell:nth-child(6) img' ).click();
+            // run hand animation 
+            if ( isInViewport(d7) && !handDisplayed ) {
+                console.log( 'visble' );
+                var logoItem = $( ".clients-left-column .logo-cell:nth-child(7) img" );
+                var position = $( ".clients-left-column .logo-cell:nth-child(7) img" ).position();
+                slidingHand( position.top, position.left, logoItem);
+                handDisplayed = true;
             }
-            
-        };
+
+            if ( isInViewport(d2) ) {
+                
+                $('#d2 .fragment').css( 'transform', 'translate(-50%, -50%)');
+                $('#d2 .fragment').css( 'opacity', '1');
+
+                /*setTimeout(function(){
+                    //d2.style.transform = "translate(-200%,-50%)";
+                    $('#d2 .fragment').animate({
+                        //opacity: 0, // animate slideUp
+                        marginLeft: '-100%',
+                        //transform: 'translate(-200%, -50%)',
+                    }, '25000', 'linear', function() {
+                        $('#d2 .fragment2').animate({
+                            //opacity: 0, // animate slideUp
+                            marginLeft: '-350%',
+                            //transform: 'translate(-200%, -50%)',
+                        }, 'slow', 'linear')    
+                    });
+                }, 2000)*/ 
+            }
+
+        }, {
+            passive: true
+        });
 
         // Keyboard  functionality
         var code = '';
@@ -383,11 +419,6 @@
         });
 
         // hand animations
-        $(".logo-cell img").click(function () {
-            var logoItem = $( this );
-            var position = $( this ).position();
-            slidingHand( position.top, position.left, logoItem);
-        });
         const slidingHand = function ( distanceTop, distanceLeft, logoItem ) {
             $('.hand').animate({
                 left: distanceLeft - 173 + 'px',
@@ -395,7 +426,6 @@
             }, {
                 duration: 1000, 
                 complete: function () {
-                    console.log( logoItem );
                     //$( logoItem ).attr( 'src', 'images/diamond.svg' );
                     $( logoItem ).remove();
                     $( logoItem ).parent().css( 'background-color', 'transparent' );
@@ -425,6 +455,13 @@
         $('#menuAbout').on('click', function(e) {
             e.preventDefault();
             window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
+            $('#d2 .fragment').animate({
+                marginLeft: '0',
+            }, 'fast', 'linear', function() {
+                $('#d2 .fragment2').animate({
+                marginLeft: '0',
+                }, 'fast', 'linear')    
+            });
         });
         $('#menuProjects').on('click', function(e) {
             e.preventDefault();

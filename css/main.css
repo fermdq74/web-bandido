@@ -463,6 +463,7 @@ nav ul li a:hover::after {
 }
 
 .main #d2 .fragment2 {
+    background-color: #f2f2f2;
     position: absolute;
     top: 25%;
     left: 50%;    
@@ -927,7 +928,6 @@ button:hover, input[type="submit"]:hover {
 .main #d8 .fragment {
     background: #FFD7EB;
     width: 86vw;
-    max-height: 660px;
     position: absolute;
     /*top: 0;
     bottom: 0;*/
@@ -955,6 +955,9 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d8 .fragment .content-wrapper .profiles-list .profile-item figure.profile-image {
     margin: 0;
+}
+.main #d8 .fragment .content-wrapper .profiles-list .profile-item .profile-bio {
+    min-height: 150px;
 }
 .wanted {
     opacity: 0;
