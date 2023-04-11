@@ -33,9 +33,9 @@
             <h1 class="title"><a id="menuHome" href="#d1"><img src="images/logo.svg" alt="Bandido"></a></h1>
             <nav>
                 <ul>
-                    <li><a id="menuAbout" href="#d2">About</a></li>
-                    <li><a id="menuProjects" href="#d5">Projects</a></li>
-                    <li><a id="menuContact" href="#d9">Contact</a></li>
+                    <li><a id="menuAbout" class="btn" href="#d2">About</a></li>
+                    <li><a id="menuProjects" class="btn" href="#d5">Projects</a></li>
+                    <li><a id="menuContact" class="btn" href="#d9">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -90,23 +90,23 @@
                 <div class="black-box">
                     <div class="black-box-left">
                         <p>To enjoy our precious gallery, please enter your code.</p>
-                        <input type="password" class="password input-field" placeholder="***">
+                        <input type="password" class="btn password input-field" placeholder="***" readonly>
                     </div>
                     <div class="black-box-right">
                         <div class="keyboard">
-                            <div class="key number">1</div>
-                            <div class="key number">2</div>
-                            <div class="key number">3</div>
-                            <div class="key number">4</div>
-                            <div class="key number">5</div>
-                            <div class="key number">6</div>
-                            <div class="key number">7</div>
-                            <div class="key number">8</div>
-                            <div class="key number">9</div>
-                            <div class="key key-get-code"> Get<br>
+                            <div class="btn key number">1</div>
+                            <div class="btn key number">2</div>
+                            <div class="btn key number">3</div>
+                            <div class="btn key number">4</div>
+                            <div class="btn key number">5</div>
+                            <div class="btn key number">6</div>
+                            <div class="btn key number">7</div>
+                            <div class="btn key number">8</div>
+                            <div class="btn key number">9</div>
+                            <div class="btn key key-get-code"> Get<br>
                                 Code </div>
-                            <div class="key">0</div>
-                            <div class="key key-enter"> ⮠<br>
+                            <div class="btn key">0</div>
+                            <div class="btn key key-enter"> ⮠<br>
                                 Enter </div>
                         </div>
                     </div>
@@ -451,6 +451,14 @@
             var y = $(window).scrollTop(); // current page position
             $(window).scrollTop(y + windowHeight); // scroll down 150px
         });
+        /*$('div').on('click', function() {
+            if ( (!$(this).hasClass('btn')) && (!$(this).hasClass('scroller')) ) {
+                var y = $(window).scrollTop(); // current page position
+                $(window).scrollTop(y + windowHeight); // scroll down 150px
+            }
+            return false;
+            
+        });*/
         // -- MENU --
         $('#menuAbout').on('click', function(e) {
             e.preventDefault();
