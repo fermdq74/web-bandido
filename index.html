@@ -33,8 +33,8 @@
             <h1 class="title"><a id="menuHome" href="#d1"><img src="images/logo.svg" alt="Bandido"></a></h1>
             <nav>
                 <ul>
-                    <li><a id="menuAbout" class="btn" href="#d2">About</a></li>
                     <li><a id="menuProjects" class="btn" href="#d5">Projects</a></li>
+                    <li><a id="menuAbout" class="btn" href="#d8">About</a></li>
                     <li><a id="menuContact" class="btn" href="#d9">Contact</a></li>
                 </ul>
             </nav>
@@ -69,7 +69,14 @@
         </section>
         <section id="d2" class="slide goto" >
             <div class="fragment">
-                <h2 class="claim2" data-aos="zoom-in" data-aos-duration="1000">The Most Wanted Video Mood Makers</h2>
+                <h2 class="claim2">
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="0">The </div> 
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="150">Most </div> 
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="200">Wanted </div> 
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="250">Video </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="300">Mood </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="320">Makers</div>
+                </h2>
             </div>
             <div class="fragment2">
                 <h2 class="claim3">We are cinematic gems Thieves</h2>
@@ -296,17 +303,28 @@
         const d2 = document.querySelector('#d2');
         const d7 = document.querySelector('#d7');
         var handDisplayed = false;
+        var scrollBottom = $(window).scrollTop() + $(window).height();
 
         document.addEventListener('scroll', function () {
 
+            scrollBottom = $(window).scrollTop() + $(window).height();
+            console.log(scrollBottom);
+
             // display logo and menu
             if ( $(window).scrollTop() > 0 ) {                
-                $('header').show(400);  
-                //$('#d1').hide(400);
+                $('header').show(400);
+                $('#scrollUp').css('visibility', 'visible');
+                if ( scrollBottom > 6720 ) {
+                    $('#scrollDown').css('visibility', 'hidden');
+                } else {
+                    $('#scrollDown').css('visibility', 'visible');
+                }
             } else {
                 $('header').hide(400);
-                //$('#d1').show(400);
+                $('#scrollUp').css('visibility', 'hidden');
+                $('#scrollDown').css('visibility', 'visible');
             }
+
 
             // run hand animation 
             if ( isInViewport(d7) && !handDisplayed ) {
@@ -439,8 +457,8 @@
 
         // -- USER SCROLL --
         var windowHeight = $(window).height();
-        var aboutDistance = $('#d2').offset().top;
         var projectsDistance = $('#d5').offset().top;
+        var aboutDistance = $('#d8').offset().top;
         var contactDistance = $('#d9').offset().top;
         // -- ARROWS --
         $('#scrollUp').on('click', function() {
@@ -460,20 +478,13 @@
             
         });*/
         // -- MENU --
-        $('#menuAbout').on('click', function(e) {
-            e.preventDefault();
-            window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
-            $('#d2 .fragment').animate({
-                marginLeft: '0',
-            }, 'fast', 'linear', function() {
-                $('#d2 .fragment2').animate({
-                marginLeft: '0',
-                }, 'fast', 'linear')    
-            });
-        });
         $('#menuProjects').on('click', function(e) {
             e.preventDefault();
             window.scroll({ top: projectsDistance, left: 0, behavior: 'smooth' });
+        });        
+        $('#menuAbout').on('click', function(e) {
+            e.preventDefault();
+            window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
         });
         $('#menuContact').on('click', function(e) {
             e.preventDefault();
