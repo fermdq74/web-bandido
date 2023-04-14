@@ -450,6 +450,7 @@ nav ul li a:hover::after {
     min-height: 544px;
     padding: 2vh 2.7vw;
     /*word-break: break-all;*/
+    max-width: 1200px;
 }
 
 .main #d2 .fragment h2.claim2 {
@@ -511,7 +512,7 @@ nav ul li a:hover::after {
     bottom: 0;*/
     margin: auto;
     width: 90vw;
-    max-width: 1360px;
+    max-width: 1100px;
 }
 
 .main #d4 .fragment p {
@@ -542,17 +543,17 @@ nav ul li a:hover::after {
 
 .main #d5 .fragment {
     color: #000;
-    background-color: #CDCDCD;
+    background-color: #DDAF94;
     position: absolute;
     /*display: none;*/
     /*top: 0;
     bottom: 0;*/
     margin: auto;
-    width: 90vw;
-    max-width: 1360px;
+    width: 43vw;
+    max-width: 1100px;
     max-height: 560px;
     display: flex;
-    padding: 5vh 0;
+    padding: 5vh;
 }
 .main #d5 .fragment .black-box {
     background-color: #000;
@@ -904,6 +905,8 @@ button:hover, input[type="submit"]:hover {
     justify-content: center;
     margin-bottom: 20px;
     float: left;
+}
+.main #d7 .fragment .content-wrapper .clients .logo-cell.diamond {
     cursor: pointer;
 }
 .main #d7 .fragment .content-wrapper .clients .logo-cell:nth-child(3n+3) {
@@ -1277,4 +1280,10 @@ button:hover, input[type="submit"]:hover {
 .main #d12 .fragment .card .content .planet img {
     height: 2em;
     width: 7rem
+}
+
+@media (max-width: 1360px) {
+    .main #d5 .fragment {
+        width: 100vh;
+    }
 }
