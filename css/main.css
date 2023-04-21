@@ -160,7 +160,7 @@ html {
 }
 
 body {
-    color: #000;
+    color: #1E001E;
     background-color: #f2f2f2;
     font-family: 'PP Neue Montreal', arial, sans-serif;
     position: relative;
@@ -218,7 +218,7 @@ nav ul li a:hover::after {
     top: 0%;
     height: 100%;
     width: 100%;
-    background-color: #000;
+    background-color: #1E001E;
 }
 
 
@@ -282,7 +282,7 @@ nav ul li a:hover::after {
 }
 
 .fixed footer a {
-    color: #000
+    color: #1E001E
 }
 
 .fixed footer div.contact {
@@ -504,7 +504,7 @@ nav ul li a:hover::after {
 }
 
 .main #d4 .fragment {
-    color: #000;
+    color: #1E001E;
     background-color: #CDCDCD;
     position: absolute;
     /*display: none;*/
@@ -526,23 +526,24 @@ nav ul li a:hover::after {
 }
 
 .main #d4 .fragment p span {
-    color: #000;
-    background-color: black;
+    color: #1E001E;
+    background-color: #1E001E;
     display: inline-block;
     line-height: 1.1;
     margin-bottom: 4px;
     -webkit-transition: all 250ms linear;
     -ms-transition: all 250ms linear;
     transition: all 250ms linear;
+    cursor: crosshair;
 }
-.main #d4 .fragment p span:hover {
+.main #d4 .fragment p span:active {
     background-color: transparent;
     color: #9191EC;
     cursor: crosshair;
 }
 
 .main #d5 .fragment {
-    color: #000;
+    color: #1E001E;
     background-color: #DDAF94;
     position: absolute;
     /*display: none;*/
@@ -556,7 +557,7 @@ nav ul li a:hover::after {
     padding: 5vh;
 }
 .main #d5 .fragment .black-box {
-    background-color: #000;
+    background-color: #1E001E;
     color: white;
     max-width: 780px;
     margin: auto;
@@ -597,7 +598,7 @@ nav ul li a:hover::after {
     width: 90px;
     height: 90px;
     background-color: white;
-    color: #000;
+    color: #1E001E;
     display: flex;
     align-items: end;
     justify-content: center;
@@ -621,7 +622,7 @@ nav ul li a:hover::after {
     align-items: center;
 }
 .main #d5 .fragment .black-box .keyboard .key.key-get-code:active {
-    background-color: #000;
+    background-color: #1E001E;
     color: #fff;
 }
 .main #d5 .fragment .black-box .keyboard .key.key-enter {
@@ -631,7 +632,7 @@ nav ul li a:hover::after {
     align-items: center;
 }
 .main #d5 .fragment .black-box .keyboard .key.key-enter:active {
-    background-color: #000;
+    background-color: #1E001E;
     color: #fff;
 }
 .main #d5 .fragment .black-box .keyboard .key:nth-child(3n+2) {
@@ -682,14 +683,14 @@ nav ul li a:hover::after {
 	height:30px;
 	display:flex;
 	align-items:center;
-	border:1px solid #000;
+	border:1px solid #1E001E;
     margin: 25px 0;
 }
 .container .Loading span{
 	position:absolute;
 	width:0%;
 	height:100%;
-	background-color:#000;
+	background-color:#1E001E;
 }
 .flash.flash-loading i {
     float: right;
@@ -800,7 +801,7 @@ button:hover, input[type="submit"]:hover {
     border-bottom: solid 20px #CDCDCD;
 }
 .video-list::-webkit-scrollbar-thumb {
-    background-color: #000;
+    background-color: #1E001E;
     border-right: solid 20px #CDCDCD;
     outline: none;
 }
@@ -819,7 +820,7 @@ button:hover, input[type="submit"]:hover {
     margin-bottom: 0.625rem;
 }
 .video-popup {
-    background-color: #000;
+    background-color: #1E001E;
     width: 100%;
     height: calc(100% - 80px);
     position: fixed;
@@ -961,6 +962,10 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d8 .fragment .content-wrapper .profiles-list .profile-item figure.profile-image {
     margin: 0;
+    max-width: 220px;
+}
+.main #d8 .fragment .content-wrapper .profiles-list .profile-item figure.profile-image img {
+    max-width: 100%;
 }
 .main #d8 .fragment .content-wrapper .profiles-list .profile-item .profile-bio {
     min-height: 150px;
@@ -985,7 +990,7 @@ button:hover, input[type="submit"]:hover {
 }
 
 .main #d9 .fragment {
-    color: #000;
+    color: #1E001E;
     box-sizing: border-box;
     width: 90vw;
     height: 74vh;
@@ -995,7 +1000,7 @@ button:hover, input[type="submit"]:hover {
     margin: auto;
 }
 .main #d9 .fragment .subscribe {
-    background-color: #000;
+    background-color: #1E001E;
     color: white;
     height: 50%;
     padding: 1.25rem;
@@ -1021,7 +1026,7 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d9 .fragment .subscribe input[type="email"] {
     background-color: #DCAF96;
-    color: #000;
+    color: #1E001E;
     min-height: 3.125rem;
     border: none;
     border-radius: 25px;
@@ -1069,22 +1074,31 @@ button:hover, input[type="submit"]:hover {
     text-align: right;
 }
 
+.main #d10 .fragment {
+    color: #1E001E;
+    background-color: #FF644B;
+    box-sizing: border-box;
+    width: 74vw;
+    padding: 2vh 2.7vw;
+    max-width: 100%;
+    display: flex;
+    transform: rotate(-11deg);
+    max-width: 1200px;
+}
+.main #d10 .fragment h2 {
+    font-size: 6.25rem;
+    font-family: 'PP Editorial New';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
 ::placeholder { /* Most modern browsers support this now. */
-    color: #000;
+    color: #1E001E;
  }
+
 /*  ----- */
 
-
-
-.main #d10 .fragment {
-    color: #000;
-    background-color: #f2f2f2;
-    box-sizing: border-box;
-    width: 65vw;
-    padding: 13vh 6vw;
-    max-width: 100%;
-    display: flex
-}
 
 .main #d10 .fragment>div {
     flex: 1
@@ -1115,7 +1129,7 @@ button:hover, input[type="submit"]:hover {
 
 .main #d11 .fragment {
     color: #fff;
-    background-color: #000;
+    background-color: #1E001E;
     box-sizing: border-box;
     width: 44vw;
     padding: 21vh 0vw;
@@ -1145,7 +1159,7 @@ button:hover, input[type="submit"]:hover {
 
 .main #d12 .fragment {
     color: #fff;
-    background-color: #000;
+    background-color: #1E001E;
     width: 100vw;
     height: 70vh
 }
@@ -1220,7 +1234,7 @@ button:hover, input[type="submit"]:hover {
     right: 15vw;
     bottom: -5vh;
     background-color: #fff;
-    color: #000;
+    color: #1E001E;
     display: flex;
     flex-direction: column
 }
@@ -1282,6 +1296,11 @@ button:hover, input[type="submit"]:hover {
     width: 7rem
 }
 
+@media (min-width: 1361px) {
+    .main #d5 .fragment {
+        width: 86vh;
+    }
+}
 @media (max-width: 1360px) {
     .main #d5 .fragment {
         width: 100vh;
