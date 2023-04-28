@@ -969,6 +969,7 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d8 .fragment .content-wrapper .profiles-list .profile-item .profile-bio {
     min-height: 150px;
+    max-width: 220px;
 }
 .wanted {
     opacity: 0;
@@ -1081,9 +1082,15 @@ button:hover, input[type="submit"]:hover {
     width: 74vw;
     padding: 2vh 2.7vw;
     max-width: 100%;
+    max-height: 525px;
     display: flex;
     transform: rotate(-11deg);
     max-width: 1200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* bottom: 0; */
+    margin: 0 auto;
 }
 .main #d10 .fragment h2 {
     font-size: 6.25rem;
