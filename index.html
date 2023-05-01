@@ -57,36 +57,47 @@
     <div id="main" class="main">
         <div class="video-popup">
             <a href="/" class="btn-close-popup">Close</a>
-            <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
         <section id="d1" class="slide goto">
             <div class="fragment">
                 <h2 class="claim">
                     <div>We are</div>
-                    <img src="images/logo.svg" alt="Bandido"></a>
+                    <span class="logo">
+                        <img id="logo-1" src="images/Ojos+Bandido-01.svg" alt="Bandido">
+                        <img id="logo-2" src="images/Ojos+Bandido-02.svg" alt="Bandido">
+                        <img id="logo-3" src="images/Ojos+Bandido-03.svg" alt="Bandido">
+                        <img id="logo-4" src="images/Ojos+Bandido-04.svg" alt="Bandido">
+                        <img id="logo-5" src="images/Ojos+Bandido-05.svg" alt="Bandido">
+                        <img id="logo-6" src="images/Ojos+Bandido-06.svg" alt="Bandido">
+                        <img id="logo-7" src="images/Ojos+Bandido-07.svg" alt="Bandido">
+                        <img id="logo-8" src="images/Ojos+Bandido-08.svg" alt="Bandido">
+                    </span>
                 </h2>
             </div>
         </section>
-        <section id="d2" class="slide goto" >
+        <section id="d2" class="slide goto">
             <div class="fragment">
-                <h2 class="claim2">
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="0">The </div> 
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="150">Most </div> 
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="200">Wanted </div> 
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="250">Mood </div>
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="300">Film </div>
-                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="350">Makers</div>
+                <h2 class="claim2" data-aos="zoom-in" data-aos-duration="100">
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="0">The </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="100">Most </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="150">Wanted </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="200">Mood </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="250">Film </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="300">Makers</div>
                 </h2>
             </div>
         </section>
 
         <section id="d4" class="slide goto">
-            <div class="fragment" >
+            <div class="fragment">
                 <p>We <span>rob footage to</span> make the best mood films.<br />
                     <span>Copyright laws can be broken for a little while.</span><br />
                     We will ride <span>like Bandidos</span> across the <br />
-                    internet until we find <span>and steal</span> the 
-                    perfect shot for your project.</p>
+                    internet until we find <span>and steal</span> the
+                    perfect shot for your project.
+                </p>
             </div>
         </section>
 
@@ -117,15 +128,15 @@
                     </div>
                 </div>
                 <div class="flash flash-incorrect">
-                    <p>Incorrect security code</p> 
+                    <p>Incorrect security code</p>
                     <div class="flash-buttons">
                         <button id="showContact" class="key-get-code">GET CODE</button>
                         <button id="closeFlash">OK</button>
                     </div>
                 </div>
                 <div class="flash flash-loading">
-                    <p>Correct code!</p>  
-                    <div class="container">	
+                    <p>Correct code!</p>
+                    <div class="container">
                         <div class="Loading">
                             <span data-charge='100'></span>
                         </div>
@@ -147,7 +158,7 @@
                                 <input type="email" name="email" placeholder="Email *" class="text-field" required />
                             </div>
                             <div class="row-form">
-                                <textarea name="message" placeholder="Optional message" class="text-field" ></textarea>
+                                <textarea name="message" placeholder="Optional message" class="text-field"></textarea>
                             </div>
                             <div class="row-form row-submit">
                                 <input type="submit" name="submit" value="Send" class="btn-submit" />
@@ -167,26 +178,39 @@
 
                     <div class="campaign">Coca Cola → Tenderos</div>
                     <div class="agency">Agency → Bla Bla</div>
-                    
+
                     <div class="video-items">
                         <div class="video-card">
                             <div class="video-title">What we robed</div>
-                            <div class="video-thumb"><a href="/" data-video-id="799104662"><img src="images/video-thumb-1.jpg"></a></div>
+                            <div class="video-thumb">
+                                <iframe id="video" src='https://player.vimeo.com/video/799104662?title=0&byline=0&portrait=0' style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                <!--<a href="/" data-video-id="799104662"><img
+                                        src="images/video-thumb-1.jpg"></a>-->
+                            </div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">What they made from it</div>
-                            <div class="video-thumb"><a href="/" data-video-id="797806367"><img src="images/video-thumb-2.jpg"></a></div>
+                            <div class="video-thumb">
+                                <iframe id="video" src='https://player.vimeo.com/video/797806367?title=0&byline=0&portrait=0' style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                <!--<a href="/" data-video-id="797806367"><img src="images/video-thumb-2.jpg"></a>-->
+                            </div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">What we robed</div>
-                            <div class="video-thumb"><a href="/" data-video-id="796583362"><img src="images/video-thumb-1.jpg"></a></div>
+                            <div class="video-thumb">
+                                <iframe id="video" src='https://player.vimeo.com/video/796583362?title=0&byline=0&portrait=0' style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                <!-- <a href="/" data-video-id="796583362"><img src="images/video-thumb-1.jpg"></a> -->
+                            </div>
                         </div>
 
                         <div class="video-card">
                             <div class="video-title">What they made from it</div>
-                            <div class="video-thumb"><a href="/" data-video-id="804672860"><img src="images/video-thumb-2.jpg"></a></div>
+                            <div class="video-thumb">
+                                <iframe id="video" src='https://player.vimeo.com/video/796583362?title=0&byline=0&portrait=0' style="width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                                <!-- <a href="/" data-video-id="804672860"><img src="images/video-thumb-2.jpg"></a> -->
+                            </div>
                         </div>
                     </div>
 
@@ -198,80 +222,88 @@
         <section id="d7" class="slide goto">
             <div class="fragment">
                 <div class="content-wrapper">
-                    <p>We are wanted by<br >
+                    <p>We are wanted by<br>
                         brands, ad agencies<br>
                         and Interpol.</p>
-                        <div class="clients">
-                            <div class="clients-left-column">
-                                <h4>Brands</h4>
-                                <div class="logo-cell"><img src="images/brands/cocacola.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/bulgari.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/adidas.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/audi.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/nike.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/vueling.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/santander.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/dosequis.svg"></div>
-                                <div class="logo-cell diamond" style="background-color: transparent;"><img src="images/diamond.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/uber.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/bmw.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/estrella.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/vw.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/movistar.svg"></div>
-                                <div class="logo-cell"><img src="images/brands/nivea.svg"></div>
-                            </div>
-                            <div class="clients-right-column">
-                                <h4>Agencies</h4>
-                                <div class="logo-cell"><img src="images/agencies/mccann.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/bbdo.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/canada.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/doyledanebernbach.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/ogilvy.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/thecyranos.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/wunderman.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/landia.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/lola.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/primo.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/14.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/anomaly.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/prime.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/unreasonablestudios.svg"></div>
-                                <div class="logo-cell"><img src="images/agencies/therockagency.svg"></div>
-                            </div>
+                    <div class="clients">
+                        <div class="clients-left-column">
+                            <h4>Brands</h4>
+                            <div class="logo-cell"><img src="images/brands/cocacola.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/bulgari.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/adidas.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/audi.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/nike.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/vueling.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/santander.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/dosequis.svg"></div>
+                            <div class="logo-cell diamond" style="background-color: transparent;"><img
+                                    src="images/diamond.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/uber.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/bmw.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/estrella.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/vw.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/movistar.svg"></div>
+                            <div class="logo-cell"><img src="images/brands/nivea.svg"></div>
                         </div>
-                        <div class="hand"><img src="images/hand.svg"></div>
+                        <div class="clients-right-column">
+                            <h4>Agencies</h4>
+                            <div class="logo-cell"><img src="images/agencies/mccann.png"></div>
+                            <div class="logo-cell"><img src="images/agencies/bbdo.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/canada.png"></div>
+                            <div class="logo-cell"><img src="images/agencies/doyledanebernbach.png"></div>
+                            <div class="logo-cell"><img src="images/agencies/ogilvy.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/thecyranos.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/wunderman.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/landia.png"></div>
+                            <div class="logo-cell"><img src="images/agencies/lola.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/primo.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/14.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/anomaly.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/prime.svg"></div>
+                            <div class="logo-cell"><img src="images/agencies/unreasonablestudios.png"></div>
+                            <div class="logo-cell"><img src="images/agencies/therockagency.svg"></div>
+                        </div>
+                    </div>
+                    <div class="hand"><img src="images/hand.svg"></div>
                 </div>
-                
-            </div>            
+
+            </div>
         </section>
 
         <section id="d8" class="slide goto">
             <div class="fragment">
                 <div class="content-wrapper">
-                    <p>Masters in the art of editing and stealing cinematic gems. These are the last known images of the skilled group of editors.</p>
+                    <p>Masters in the art of editing and stealing cinematic gems. These are the last known images of the
+                        skilled group of editors.</p>
                     <div class="profiles-list">
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/bandido-a.jpg"></figure>
                             <h4 class="profile-name">Catalina<br />
                                 Gorosterrazu</h4>
-                            <div class="profile-bio">Born in the glorious land of Maradona. She’s followed Messi’s footsteps to Barcelona where she’s worked as an ad creative. Her dark arts are dribbling through internet security and scoring at top level pitches.</div>
+                            <div class="profile-bio">Born in the glorious land of Maradona. She’s followed Messi’s
+                                footsteps to Barcelona where she’s worked as an ad creative. Her dark arts are dribbling
+                                through internet security and scoring at top level pitches.</div>
                         </div>
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/bandido-b.jpg"></figure>
                             <h4 class="profile-name">Jorge<br />
                                 Yúdice</h4>
-                            <div class="profile-bio">He earns money editing and he loses it directing short films. His secret weapons are his versatility, audiovisual memory, and lust for storytelling. He threatens to direct a feature film one day.</div>
+                            <div class="profile-bio">He earns money editing and he loses it directing short films. His
+                                secret weapons are his versatility, audiovisual memory, and lust for storytelling. He
+                                threatens to direct a feature film one day.</div>
                         </div>
                         <div class="profile-item">
                             <figure class="profile-image"><img src="images/bandido-c.jpg"></figure>
                             <h4 class="profile-name">Néstor<br />
-                                H. Ruano</h4>    
-                            <div class="profile-bio">With experience in advertising, film, and TV, this 4x4 editor has skills for both narrative and rhythm. The chase will go on until he gets the right material. No worries, he knows all the shortcuts.</div>
+                                H. Ruano</h4>
+                            <div class="profile-bio">With experience in advertising, film, and TV, this 4x4 editor has
+                                skills for both narrative and rhythm. The chase will go on until he gets the right
+                                material. No worries, he knows all the shortcuts.</div>
                         </div>
                     </div>
                 </div>
-                <div class="wanted" data-aos="fade-up"
-                data-aos-anchor-placement="top-bottom" data-aos-delay="50">Wanted</div>
+                <div class="wanted" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="50">Wanted
+                </div>
             </div>
         </section>
 
@@ -290,12 +322,21 @@
                 </div>
                 <div class="contact">
                     <div class="iso">
-                        <img alt="" src="images/iso-logo.svg" aria-hidden="true" />
+                        <!--<img id="ojos" alt="" src="images/Ojos-01.svg" aria-hidden="true" />-->
+                        <img id="ojos1" alt="" src="images/Ojos-01.svg" aria-hidden="true" />
+                        <img id="ojos2" alt="" src="images/Ojos-02.svg" aria-hidden="true" />
+                        <img id="ojos3" alt="" src="images/Ojos-03.svg" aria-hidden="true" />
+                        <img id="ojos4" alt="" src="images/Ojos-04.svg" aria-hidden="true" />
+                        <img id="ojos5" alt="" src="images/Ojos-05.svg" aria-hidden="true" />
+                        <img id="ojos6" alt="" src="images/Ojos-06.svg" aria-hidden="true" />
+                        <img id="ojos7" alt="" src="images/Ojos-07.svg" aria-hidden="true" />
+                        <img id="ojos8" alt="" src="images/Ojos-08.svg" aria-hidden="true" />
                     </div>
                     <div class="content">
                         <h1>Contact Us</h1>
                         <h2><a href="mailto:hola@bandido.com">hola@bandido.com</a><br />
-                            <a href="https://wa.me/34627231754" target="_blank">Whatsapp</a></h2>
+                            <a href="https://wa.me/34627231754" target="_blank">Whatsapp</a>
+                        </h2>
                     </div>
                 </div>
 
@@ -304,7 +345,8 @@
 
         <section id="d10" class="slide goto">
             <div class="fragment">
-                <h2 class="claim2">Delete this website from your browsing history to avoid potential charges of complicity</h2>
+                <h2 class="claim2">Delete this website from your browsing history to avoid potential charges of
+                    complicity</h2>
             </div>
         </section>
 
@@ -314,7 +356,7 @@
         // slides positions
         var elementPosition1 = $('#d1').position().top + $('#d1').height();
         var elementPosition2 = $('#d2').position().top + $('#d2').height();
-        
+
         const d1 = document.querySelector('#d1');
         const d2 = document.querySelector('#d2');
         const d7 = document.querySelector('#d7');
@@ -327,11 +369,12 @@
             console.log(scrollBottom);
 
             // display logo and menu
-            if ( $(window).scrollTop() > 0 ) {                
+            if ($(window).scrollTop() > 0) {
                 $('header').show(400);
                 $('#scrollUp').css('visibility', 'visible');
-                if ( scrollBottom > 6720 ) {
+                if (scrollBottom > 11000) {
                     $('#scrollDown').css('visibility', 'hidden');
+                    return false;
                 } else {
                     $('#scrollDown').css('visibility', 'visible');
                 }
@@ -348,12 +391,12 @@
                 var position = $( ".clients-left-column .logo-cell:nth-child(7) img" ).position();
                 slidingHand( position.top, position.left, logoItem);
                 handDisplayed = true;
-            }*/ 
+            }*/
 
-            if ( isInViewport(d2) ) {
-                
-                $('#d2 .fragment').css( 'transform', 'translate(-50%, -50%)');
-                $('#d2 .fragment').css( 'opacity', '1');
+            if (isInViewport(d2)) {
+
+                $('#d2 .fragment').css('transform', 'translate(-50%, -50%)');
+                $('#d2 .fragment').css('opacity', '1');
 
                 /*setTimeout(function(){
                     //d2.style.transform = "translate(-200%,-50%)";
@@ -368,7 +411,7 @@
                             //transform: 'translate(-200%, -50%)',
                         }, 'slow', 'linear')    
                     });
-                }, 2000)*/ 
+                }, 2000)*/
             }
 
         }, {
@@ -380,14 +423,14 @@
         var isValidCode = false;
 
         $(".key.number").click(function () {
-            code = code + $( this ).html();
-            $(".password").val( code);
+            code = code + $(this).html();
+            $(".password").val(code);
         });
 
         $(".key-enter").click(function () {
 
             // Complete this functionality to check for the code
-            if ( code == '456' ) {
+            if (code == '456') {
                 isValidCode = true;
             }
 
@@ -453,25 +496,25 @@
 
         // hand animations
         $(".diamond").click(function () {
-                var logoItem = $( ".clients-left-column .logo-cell:nth-child(10) img" );
-                var position = $( ".clients-left-column .logo-cell:nth-child(10) img" ).position();
-                slidingHand( position.top, position.left, logoItem);
-                handDisplayed = true;
-            });
-        const slidingHand = function ( distanceTop, distanceLeft, logoItem ) {
+            var logoItem = $(".clients-left-column .logo-cell:nth-child(10) img");
+            var position = $(".clients-left-column .logo-cell:nth-child(10) img").position();
+            slidingHand(position.top, position.left, logoItem);
+            handDisplayed = true;
+        });
+        const slidingHand = function (distanceTop, distanceLeft, logoItem) {
             $('.hand').animate({
                 left: distanceLeft - 173 + 'px',
-                top: distanceTop + 70 - $( '.hand' ).height() + 'px'
+                top: distanceTop + 70 - $('.hand').height() + 'px'
             }, {
-                duration: 1500, 
+                duration: 1500,
                 complete: function () {
                     //$( logoItem ).attr( 'src', 'images/diamond.svg' );
-                    $( logoItem ).remove();
-                    $( logoItem ).parent().css( 'background-color', 'transparent' );
-                    $( '.hand').find( 'img' ).attr( 'src', 'images/hand-with-diamond.svg' );
+                    $(logoItem).remove();
+                    $(logoItem).parent().css('background-color', 'transparent');
+                    $('.hand').find('img').attr('src', 'images/hand-with-diamond.svg');
                 }
             });
-            $( '.hand' ).animate({
+            $('.hand').animate({
                 left: '150%'
             }, 1000);
         }
@@ -482,11 +525,11 @@
         var aboutDistance = $('#d8').offset().top;
         var contactDistance = $('#d9').offset().top;
         // -- ARROWS --
-        $('#scrollUp').on('click', function() {
+        $('#scrollUp').on('click', function () {
             var y = $(window).scrollTop(); // current page position
             $(window).scrollTop(y - windowHeight); // scroll up 150px
         });
-        $('#scrollDown').on('click', function() {
+        $('#scrollDown').on('click', function () {
             var y = $(window).scrollTop(); // current page position
             $(window).scrollTop(y + windowHeight); // scroll down 150px
         });
@@ -499,28 +542,116 @@
             
         });*/
         // -- MENU --
-        $('#menuProjects').on('click', function(e) {
+        $('#menuProjects').on('click', function (e) {
             e.preventDefault();
             window.scroll({ top: projectsDistance, left: 0, behavior: 'smooth' });
-        });        
-        $('#menuAbout').on('click', function(e) {
+        });
+        $('#menuAbout').on('click', function (e) {
             e.preventDefault();
             window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
         });
-        $('#menuContact').on('click', function(e) {
+        $('#menuContact').on('click', function (e) {
             e.preventDefault();
             window.scroll({ top: contactDistance, left: 0, behavior: 'smooth' });
         });
-        $('#menuHome').on('click', function(e) {
+        $('#menuHome').on('click', function (e) {
             e.preventDefault();
             window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         });
+
+
+        /* SPLASH AND CONTACT PAGE - EYES ANIMATION*/
+        $("#ojos1").css('display', 'block');
         
+        function eyesAnimation() {
+
+            window.setTimeout(function () {
+                $("#ojos2").css('display', 'block');
+                $("#logo-2").css('display', 'block');
+            }, 100);
+
+            window.setTimeout(function () {
+                $("#ojos3").css('display', 'block');
+                $("#logo-3").css('display', 'block');
+            }, 120);
+
+            window.setTimeout(function () {
+                $("#ojos4").css('display', 'block');
+                $("#logo-4").css('display', 'block');
+            }, 140);
+
+            window.setTimeout(function () {
+                $("#ojos5").css('display', 'block');
+                $("#logo-5").css('display', 'block');
+            }, 160);
+
+            window.setTimeout(function () {
+                $("#ojos6").css('display', 'block');
+                $("#logo-6").css('display', 'block');
+            }, 180);
+
+            window.setTimeout(function () {
+                $("#ojos7").css('display', 'block');
+                $("#logo-7").css('display', 'block');
+            }, 200);
+
+            window.setTimeout(function () {
+                $("#ojos8").css('display', 'block');
+                $("#logo-8").css('display', 'block');
+            }, 220);
+
+            window.setTimeout(function () {
+                $("#ojos8").css('display', 'none');
+                $("#logo-8").css('display', 'none');
+            }, 400);
+
+            window.setTimeout(function () {
+                $("#ojos7").css('display', 'none');
+                $("#logo-7").css('display', 'none');
+            }, 420);
+
+            window.setTimeout(function () {
+                $("#ojos6").css('display', 'none');
+                $("#logo-6").css('display', 'none');
+            }, 440);
+
+            window.setTimeout(function () {
+                $("#ojos5").css('display', 'none');
+                $("#logo-5").css('display', 'none');
+            }, 460);
+
+            window.setTimeout(function () {
+                $("#ojos4").css('display', 'none');
+                $("#logo-4").css('display', 'none');
+            }, 480);
+
+            window.setTimeout(function () {
+                $("#ojos3").css('display', 'none');
+                $("#logo-3").css('display', 'none');
+            }, 500);
+
+            window.setTimeout(function () {
+                $("#ojos2").css('display', 'none');
+                $("#logo-2").css('display', 'none');
+            }, 520);
+            // and schedule a repeat
+            setTimeout(eyesAnimation, 5000);
+        }
+
+        eyesAnimation();
+
+        var intervalId = window.setInterval(function () {
+
+
+
+        }, 5000);
+
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
 </body>
+
 </html>

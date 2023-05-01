@@ -170,6 +170,7 @@ body {
     scrollbar-width: none;
     overflow-x: hidden;
     height: 100%;
+    max-height: 10552px;
 }
 
 body a {
@@ -380,7 +381,9 @@ nav ul li a:hover::after {
     height: 100vh;
     top: 0;
     /*margin-top: 10vh;*/
-    scroll-margin-top: 50px;
+    /*scroll-margin-top: 50px;*/
+    /*scroll-margin-bottom: 100px;*/
+    margin-top: 50vh;
 }
 
 .main .slide:first-child {
@@ -394,6 +397,9 @@ nav ul li a:hover::after {
     transform: translate(-50%, -50%)
 }
 
+.main #d1.slide {
+    margin-top: 0;
+}
 .main #d1 .fragment {
     box-sizing: border-box;
     width: 100vw;
@@ -441,6 +447,20 @@ nav ul li a:hover::after {
     width: auto
 }
 
+.main #d1 .fragment span img {
+    position: relative;
+}
+.main #d1 .fragment span img {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.main #d1 .fragment span img:first-child {
+    display: inline-block;
+}
+
 .main #d2 .fragment {
     display: flex;
     color: #DDAF94;
@@ -461,6 +481,7 @@ nav ul li a:hover::after {
     text-transform: uppercase;
     /*display: flex;*/
     align-self: center;
+    height: 100%;
 }
 .main #d2 .fragment h2.claim2 div {
     display: inline-block;
@@ -475,20 +496,6 @@ nav ul li a:hover::after {
     transform: translate(-50%,-50%);
     word-break: keep-all;
     min-width: 100%;
-}
-.main #d2 .fragment2 h2.claim3 {
-    color: #73A073;
-    font-family: 'PP Editorial New';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 420px;
-    letter-spacing: -10px;
-    left: 100%;
-    right: 0;
-    top: 0;
-    height: 420px;
-    width: 5301px;
-    position: absolute;
 }
 
 .main #d3 .fragment {
@@ -528,8 +535,8 @@ nav ul li a:hover::after {
 .main #d4 .fragment p span {
     color: #1E001E;
     background-color: #1E001E;
-    display: inline-block;
-    line-height: 1.1;
+    /*display: inline-block;*/
+    line-height: 1.25;
     margin-bottom: 4px;
     -webkit-transition: all 250ms linear;
     -ms-transition: all 250ms linear;
@@ -799,11 +806,12 @@ button:hover, input[type="submit"]:hover {
     border-right: solid 20px #CDCDCD;
     border-top: solid 20px #CDCDCD;
     border-bottom: solid 20px #CDCDCD;
+    outline: none;
 }
 .video-list::-webkit-scrollbar-thumb {
     background-color: #1E001E;
     border-right: solid 20px #CDCDCD;
-    outline: none;
+    /*outline: none;*/
 }
 .video-items {
     max-width: 940px;
@@ -818,6 +826,10 @@ button:hover, input[type="submit"]:hover {
 .main #d6 .fragment .video-card .video-title {
     font-size: 1.5rem;
     margin-bottom: 0.625rem;
+}
+.main #d6 .fragment .video-card .video-thumb {
+    width: 460px;
+    height: 260px;
 }
 .video-popup {
     background-color: #1E001E;
@@ -925,7 +937,7 @@ button:hover, input[type="submit"]:hover {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: -115%;
+    right: calc(-2590px - 30%);
     margin: 0;
     cursor: pointer;
     max-height: 335px;
@@ -988,6 +1000,10 @@ button:hover, input[type="submit"]:hover {
     letter-spacing: -10px;
     color: #FF644B;
     mix-blend-mode: multiply;
+}
+
+.main #d9.slide {
+ /*margin-bottom: 0;*/
 }
 
 .main #d9 .fragment {
@@ -1068,6 +1084,15 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d9 .fragment .contact .iso {
     float: left;
+    width: 170px;
+    height: 127px;
+    position: relative;
+    max-width: 100%;
+}
+.main #d9 .fragment .contact .iso img {
+    float: left;
+    position: absolute;
+    display: none;
 }
 .main #d9 .fragment .contact .content {
     width: 34%;
@@ -1075,6 +1100,9 @@ button:hover, input[type="submit"]:hover {
     text-align: right;
 }
 
+.main #d10.slide {
+    margin-bottom: 0;
+}
 .main #d10 .fragment {
     color: #1E001E;
     background-color: #FF644B;
@@ -1086,10 +1114,10 @@ button:hover, input[type="submit"]:hover {
     display: flex;
     transform: rotate(-11deg);
     max-width: 1200px;
-    top: 0;
+    top: 20%;
     left: 0;
     right: 0;
-    /* bottom: 0; */
+    bottom: 0;
     margin: 0 auto;
 }
 .main #d10 .fragment h2 {
@@ -1098,6 +1126,7 @@ button:hover, input[type="submit"]:hover {
     font-style: normal;
     font-weight: 400;
     line-height: 1;
+    text-align: center;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
