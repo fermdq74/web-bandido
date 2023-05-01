@@ -341,8 +341,11 @@ nav ul li a:hover::after {
   }
 
 @media (orientation: portrait) {
-    .main {
+    .main, .scroller {
         display: none !important
+    }
+    .fixed {
+        width: 100vw;
     }
 }
 
@@ -354,14 +357,16 @@ nav ul li a:hover::after {
     bottom: 0;
     right: 0;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
 }
 
 .rotate img {
     position: relative;
     max-height: 40vh;
     max-width: 40vw;
-    width: auto
+    width: 100%
 }
 
 @media (orientation: portrait) {
@@ -807,11 +812,13 @@ button:hover, input[type="submit"]:hover {
     border-top: solid 20px #CDCDCD;
     border-bottom: solid 20px #CDCDCD;
     outline: none;
+    box-shadow: none;
 }
 .video-list::-webkit-scrollbar-thumb {
     background-color: #1E001E;
     border-right: solid 20px #CDCDCD;
-    /*outline: none;*/
+    outline: none;
+    box-shadow: none;
 }
 .video-items {
     max-width: 940px;
