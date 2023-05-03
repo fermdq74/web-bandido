@@ -548,7 +548,7 @@ nav ul li a:hover::after {
     transition: all 250ms linear;
     cursor: crosshair;
 }
-.main #d4 .fragment p span:active {
+.main #d4 .fragment p span:hover {
     background-color: transparent;
     color: #9191EC;
     cursor: crosshair;
@@ -823,6 +823,10 @@ button:hover, input[type="submit"]:hover {
 .video-items {
     max-width: 940px;
     margin: 40px auto 0;
+}
+.video-work {
+    display: inline-block;
+    width: 100%;
 }
 
 .main #d6 .fragment .video-card {
