@@ -1062,7 +1062,7 @@ button:hover, input[type="submit"]:hover {
     width: 458px;
     padding: 0 15px;
 }
-.main #d9 .fragment .subscribe button {
+.main #d9 .fragment .subscribe input[type="submit"] {
     margin-left: -50px;
     line-height: 50px;
     width: 50px;
@@ -1134,6 +1134,8 @@ button:hover, input[type="submit"]:hover {
     font-weight: 400;
     line-height: 1;
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
@@ -1347,5 +1349,49 @@ button:hover, input[type="submit"]:hover {
 @media (max-width: 1360px) {
     .main #d5 .fragment {
         width: 100vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .scroller, nav {
+        display: none;
+    }
+    .fixed header {
+        top: 1rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+    .fixed header h1.title {
+        max-width: 114px;
+        margin: 0 auto;
+    }
+    .fixed header h1.title img {
+        max-width: 100%;
+    }
+    .main #d1 .fragment h2.claim {
+        font-size: 1.875rem;
+        max-width: 256px;
+    }
+    .main #d1 .fragment div {
+        bottom: 1rem;
+    }
+    .main #d1 .fragment h2.claim img {
+        width: auto;
+        height: auto;
+        max-width: none;
+    }
+    .main #d2 .fragment h2.claim2 {
+        font-size: 3.75rem;
+        line-height: 1;
+    }
+    .main #d2 .fragment {
+        min-height: 224px;
+    }
+    .main #d4 .fragment {
+        width: 88vw;
+    }
+    .main #d4 .fragment p {
+        font-size: 2rem;
     }
 }

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>We Are Bandido - The most wanted video mood makers</title>
+    <meta name="description" content="" />
+    <meta name="author" content="MEIN" />
+    <meta property="og:image" content="images/share-image.png" />
+    <meta property="og:description" content="" />
+    <meta property="og:title" content="Bandido" />
+    <meta name="twitter:title" content="Bandido" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/bandido-icon-x2.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/bandido-icon-1.5.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/bandido-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/bandido-icon.png" />
+    <link rel="shortcut icon" href="images/bandido-icon.png" />
+    <script
+        src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll%2Cviewport%2Cwindow.scroll%2Cwindow.scrollBy%2CscrollIntoView%2Cscroll%2CscrollBy%2Cscreen.orientation%2CrequestAnimationFrame%2CinnerWidth%2CinnerHeight%2Cdefault%2Cdocument.getElementsByClassName"></script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/functions.js"></script>
+    <link href="css/montreal.css" rel="stylesheet">
+    <link href="css/supply.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <div class="fixed">
+        <header>
+            <h1 class="title"><a id="menuHome" href="#d1"><img src="images/logo.svg" alt="Bandido"></a></h1>
+            <nav>
+                <ul>
+                    <li><a id="menuProjects" class="btn" href="#d5">Projects</a></li>
+                    <li><a id="menuAbout" class="btn" href="#d8">About</a></li>
+                    <li><a id="menuContact" class="btn" href="#d9">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <footer>
+            <div class="hidden"></div>
+        </footer>
+        <div class="rotate" aria-valuetext="Please, rotate your smartphone">
+            <img alt="Rotate your smartphone" src="images/rotate-smartphone.svg" />
+            <h3>Please, rotate your smartphone</h3>
+            <div class="credits" aria-hidden="true">
+                <small>Rotate smartphone icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+                    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+            </div>
+        </div>
+    </div>
+    <div class="scroller">
+        <a id="scrollUp"><img src="images/arrow-up.svg"></a>
+        <a id="scrollDown"><img src="images/arrow-down.svg"></a>
+    </div>
+    <div id="main" class="main">
+        <div class="video-popup">
+            <a href="/" class="btn-close-popup">Close</a>
+            <iframe id="video" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <section id="d1" class="slide goto">
+            <div class="fragment">
+                <h2 class="claim">
+                    <div>We are</div>
+                    <span class="logo">
+                        <img id="logo-1" src="images/Ojos+Bandido-01.svg" alt="Bandido">
+                        <img id="logo-2" src="images/Ojos+Bandido-02.svg" alt="Bandido">
+                        <img id="logo-3" src="images/Ojos+Bandido-03.svg" alt="Bandido">
+                        <img id="logo-4" src="images/Ojos+Bandido-04.svg" alt="Bandido">
+                        <img id="logo-5" src="images/Ojos+Bandido-05.svg" alt="Bandido">
+                        <img id="logo-6" src="images/Ojos+Bandido-06.svg" alt="Bandido">
+                        <img id="logo-7" src="images/Ojos+Bandido-07.svg" alt="Bandido">
+                        <img id="logo-8" src="images/Ojos+Bandido-08.svg" alt="Bandido">
+                    </span>
+                </h2>
+            </div>
+        </section>
+        <section id="d2" class="slide goto">
+            <div class="fragment">
+                <h2 class="claim2" data-aos="zoom-in" data-aos-duration="100">
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="0">The </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="100">Most </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="150">Wanted </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="200">Mood </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="250">Film </div>
+                    <div data-aos="zoom-in" data-aos-duration="100" data-aos-delay="300">Makers</div>
+                </h2>
+            </div>
+        </section>
+        <section id="d4" class="slide goto">
+            <div class="fragment">
+                <p>We <span>rob footage to</span> make the best mood films.<br />
+                    <span>Copyright laws can be broken for a little while.</span><br />
+                    We will ride <span>like Bandidos</span> across the <br />
+                    internet until we find <span>and steal</span> the
+                    perfect shot for your project.
+                </p>
+            </div>
+        </section>
+
+        
+
+    </div>
+
+    <script>
+        // slides positions
+        var elementPosition1 = $('#d1').position().top + $('#d1').height();
+        var elementPosition2 = $('#d2').position().top + $('#d2').height();
+
+        const d1 = document.querySelector('#d1');
+        const d2 = document.querySelector('#d2');
+        const d7 = document.querySelector('#d7');
+        var handDisplayed = false;
+        var scrollBottom = $(window).scrollTop() + $(window).height();
+
+        document.addEventListener('scroll', function () {
+
+            scrollBottom = $(window).scrollTop() + $(window).height();
+            console.log(scrollBottom);
+
+            // display logo and menu
+            if ($(window).scrollTop() > 0) {
+                $('header').css('display', 'block');
+            } else {
+                $('header').css('display', 'none');
+            }
+
+        }, {
+            passive: true
+        });
+
+        // Keyboard  functionality
+        var code = '';
+        var isValidCode = false;
+
+        $(".key.number").click(function () {
+            code = code + $(this).html();
+            $(".password").val(code);
+        });
+
+        $(".key-enter").click(function () {
+
+            // Complete this functionality to check for the code
+            if (code == '456') {
+                isValidCode = true;
+            }
+
+            if (isValidCode) {
+                $(".flash.flash-loading").show();
+                loadingBar();
+            } else {
+                $('.flash.flash-incorrect').css('display', 'flex');
+            }
+
+            code = '';
+        });
+
+        $("#closeFlash").click(function () {
+            $(".flash").hide();
+        });
+
+        $(".key-get-code").click(function () {
+            $(".flash").hide();
+            $(".flash.flash-contact").show();
+        });
+
+        $(".close-form").click(function () {
+            $(".flash-form").hide();
+        });
+
+        // Loading bar
+        const loadingBar = function () {
+
+            $('.Loading span').animate({
+                width: $('.Loading span').data('charge') + '%'
+            }, 1000);
+
+            var getCounter = parseInt($('.flash-loading i').text());
+
+            var MyCounter = setInterval(function () {
+                if (getCounter !== 101) {
+                    $('.flash-loading i').text(getCounter++ + '%');
+                } else {
+                    clearInterval(MyCounter);
+                    getCounter = 0;
+                    $('.flash-loading').hide();
+                    $('#d5').hide();
+                    $('#d6').show();
+                };
+
+            }, 10);
+
+        };
+
+        // hand animations
+        $(".diamond").click(function () {
+            var logoItem = $(".clients-left-column .logo-cell:nth-child(10) img");
+            var position = $(".clients-left-column .logo-cell:nth-child(10) img").position();
+            slidingHand(position.top, position.left, logoItem);
+            handDisplayed = true;
+        });
+        const slidingHand = function (distanceTop, distanceLeft, logoItem) {
+            $('.hand').animate({
+                left: distanceLeft - 173 + 'px',
+                top: distanceTop + 70 - $('.hand').height() + 'px'
+            }, {
+                duration: 1500,
+                complete: function () {
+                    //$( logoItem ).attr( 'src', 'images/diamond.svg' );
+                    $(logoItem).remove();
+                    $(logoItem).parent().css('background-color', 'transparent');
+                    $('.hand').find('img').attr('src', 'images/hand-with-diamond.svg');
+                }
+            });
+            $('.hand').animate({
+                left: '150%'
+            }, 1000);
+        }
+
+        // -- USER SCROLL --
+        var windowHeight = $(window).height();
+        var projectsDistance = $('#d5').offset().top;
+        var aboutDistance = $('#d8').offset().top;
+        var contactDistance = $('#d9').offset().top;
+        // -- ARROWS --
+        $('#scrollUp').on('click', function () {
+            var y = $(window).scrollTop(); // current page position
+            $(window).scrollTop(y - windowHeight); // scroll up 150px
+        });
+        $('#scrollDown').on('click', function () {
+            var y = $(window).scrollTop(); // current page position
+            $(window).scrollTop(y + windowHeight); // scroll down 150px
+        });
+
+        // -- MENU --
+        $('#menuProjects').on('click', function (e) {
+            e.preventDefault();
+            window.scroll({ top: projectsDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuAbout').on('click', function (e) {
+            e.preventDefault();
+            window.scroll({ top: aboutDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuContact').on('click', function (e) {
+            e.preventDefault();
+            window.scroll({ top: contactDistance, left: 0, behavior: 'smooth' });
+        });
+        $('#menuHome').on('click', function (e) {
+            e.preventDefault();
+            window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        });
+
+
+        /* SPLASH AND CONTACT PAGE - EYES ANIMATION*/
+        $("#ojos1").css('display', 'block');
+        
+        function eyesAnimation() {
+
+            window.setTimeout(function () {
+                $("#ojos2").css('display', 'block');
+                $("#logo-2").css('display', 'block');
+            }, 100);
+
+            window.setTimeout(function () {
+                $("#ojos3").css('display', 'block');
+                $("#logo-3").css('display', 'block');
+            }, 120);
+
+            window.setTimeout(function () {
+                $("#ojos4").css('display', 'block');
+                $("#logo-4").css('display', 'block');
+            }, 140);
+
+            window.setTimeout(function () {
+                $("#ojos5").css('display', 'block');
+                $("#logo-5").css('display', 'block');
+            }, 160);
+
+            window.setTimeout(function () {
+                $("#ojos6").css('display', 'block');
+                $("#logo-6").css('display', 'block');
+            }, 180);
+
+            window.setTimeout(function () {
+                $("#ojos7").css('display', 'block');
+                $("#logo-7").css('display', 'block');
+            }, 200);
+
+            window.setTimeout(function () {
+                $("#ojos8").css('display', 'block');
+                $("#logo-8").css('display', 'block');
+            }, 220);
+
+            window.setTimeout(function () {
+                $("#ojos8").css('display', 'none');
+                $("#logo-8").css('display', 'none');
+            }, 400);
+
+            window.setTimeout(function () {
+                $("#ojos7").css('display', 'none');
+                $("#logo-7").css('display', 'none');
+            }, 420);
+
+            window.setTimeout(function () {
+                $("#ojos6").css('display', 'none');
+                $("#logo-6").css('display', 'none');
+            }, 440);
+
+            window.setTimeout(function () {
+                $("#ojos5").css('display', 'none');
+                $("#logo-5").css('display', 'none');
+            }, 460);
+
+            window.setTimeout(function () {
+                $("#ojos4").css('display', 'none');
+                $("#logo-4").css('display', 'none');
+            }, 480);
+
+            window.setTimeout(function () {
+                $("#ojos3").css('display', 'none');
+                $("#logo-3").css('display', 'none');
+            }, 500);
+
+            window.setTimeout(function () {
+                $("#ojos2").css('display', 'none');
+                $("#logo-2").css('display', 'none');
+            }, 520);
+            // and schedule a repeat
+            setTimeout(eyesAnimation, 5000);
+        }
+
+        eyesAnimation();
+
+        var intervalId = window.setInterval(function () {
+
+
+
+        }, 5000);
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
