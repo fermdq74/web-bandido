@@ -791,8 +791,13 @@ button:hover, input[type="submit"]:hover {
     transform:translate(-50%, 24%);*/
 }
 
-.main #d6 .fragment .campaign, .main #d6 .fragment .agency {
-    font-size: 2.5rem;
+.main #d6 .fragment .campaign {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.main #d6 .fragment .agency {
+    font-size: 1.7rem;
+    font-style: italic;
 }
 
 .video-list {
@@ -822,7 +827,7 @@ button:hover, input[type="submit"]:hover {
 }
 .video-items {
     max-width: 940px;
-    margin: 40px auto 0;
+    margin: 10px auto 0;
 }
 .video-work {
     display: inline-block;
@@ -835,8 +840,8 @@ button:hover, input[type="submit"]:hover {
     margin-bottom: 3rem;
 }
 .main #d6 .fragment .video-card .video-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.625rem;
+    font-size: 1.25rem;
+    margin-top: 0.325rem;
 }
 .main #d6 .fragment .video-card .video-thumb {
     width: 460px;
@@ -938,11 +943,11 @@ button:hover, input[type="submit"]:hover {
 }
 .main #d7 .fragment .content-wrapper .clients .clients-left-column {
     float: left;
-    width: 45%;
+    width: 40%;
 }
 .main #d7 .fragment .content-wrapper .clients .clients-right-column {
     float: right;
-    width: 45%;
+    width: 40%;
 }
 .main #d7 .hand {
     position: absolute;
@@ -1472,7 +1477,6 @@ button:hover, input[type="submit"]:hover {
     }
     .video-items {
         max-width: 100%;
-        margin: 1rem auto 0;
     }
     .main #d6 .fragment .video-card .video-title {
         font-size: .75rem;
@@ -1484,11 +1488,11 @@ button:hover, input[type="submit"]:hover {
 
     .main #d7 .fragment .content-wrapper {
         max-width: 86%;
-        padding: 1rem;
+        padding: .5rem;
     }
     .main #d7 .fragment .content-wrapper p {
-        font-size: 1rem;
-        width: 34%;
+        font-size: 1.2rem;
+        width: 40%;
     }
     .main #d7 .fragment .content-wrapper p br {
         display: none;
@@ -1501,8 +1505,8 @@ button:hover, input[type="submit"]:hover {
         margin-bottom: .25rem;
     }
     .main #d7 .fragment .content-wrapper .clients .logo-cell {
-        width: 30%;
-        height: 33px;
+        width: 27%;
+        height: 32px;
         margin-bottom: 12px;
     }
     .main #d7 .fragment .content-wrapper .clients .logo-cell:nth-child(3n+3) {
@@ -1513,9 +1517,21 @@ button:hover, input[type="submit"]:hover {
         max-width: 100%;
     }
 
+    .main #d7 .hand {
+        top: 52.9375px!important;
+        right: calc(-2472px);
+        margin-left: 110px;
+    }
+    .main #d7 .hand img {
+        max-height: 150px;
+    }
+
     .main #d8 .fragment {
         width: 92vw;
     }
+    .main #d8 .fragment .content-wrapper {
+        padding: 0.5rem;
+    }    
     .main #d8 .fragment .content-wrapper p {
         font-size: 1.25rem;
     }
@@ -1530,37 +1546,60 @@ button:hover, input[type="submit"]:hover {
     }
     .main #d8 .fragment .content-wrapper .profiles-list .profile-item h4.profile-name {
         font-size: 1rem;
+        line-height: 1;
+        margin-bottom: .25rem;
     }
     .main #d8 .fragment .content-wrapper .profiles-list .profile-item figure.profile-image {
         max-width: 100px;
     }
     .main #d8 .fragment .content-wrapper .profiles-list .profile-item .profile-bio {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         min-height: auto;
     }
     .wanted {
         font-size: 14.25rem;
         left: -25px;
+        top: 2rem;
     }
 
+    .main #d9 .fragment .subscribe {
+        padding: .5rem;
+    }
+    .main #d9 .fragment .contact {
+        padding: .5rem;
+    }
     .main #d9 .fragment .subscribe h1 {
         font-size: 4rem;
     }
     .main #d9 .fragment .subscribe h2 {
         font-size: 1.25rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     .main #d9 .fragment .contact .iso {
-        width: 100px;
+        width: 65px;
     }
 
     .main #d9 .fragment .subscribe input[type="email"] {
-        min-height: 1.125rem;
-        width: 270px;
+        font-size: 1rem;
+        min-height: 1.5rem;
+        width: 170px;
+    }
+    .main #d9 .fragment .subscribe input[type="submit"] {
+        margin-left: -50px;
+        line-height: 1rem;
     }
     .main #d9 .fragment .contact h1, .main #d9 .fragment .contact h2 {
         font-size: 1.25rem;
         margin-bottom: 1.5rem;
+    }
+    .main #d10 .fragment {
+        bottom: unset;
+        max-height: 300px;
+        width: 83vw;
+        padding: 0.5rem 2.5rem;
+    }
+    .main #d10 .fragment h2 {
+        font-size: 3rem;
     }
 }
 
