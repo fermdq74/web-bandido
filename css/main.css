@@ -1095,8 +1095,15 @@ button:hover, input[type="submit"]:hover {
 .main #d9 .fragment .contact h1 {
     margin-bottom: 3rem;
 }
+.main #d9 .fragment .contact h2 {
+    line-height: 1.2;
+}
 .main #d9 .fragment .contact a {
+    display: inline-block;
     text-decoration: none;
+}
+.main #d9 .fragment .contact a.social img {
+    max-width: 100%;
 }
 .main #d9 .fragment .contact .iso {
     float: left;
@@ -1591,6 +1598,10 @@ button:hover, input[type="submit"]:hover {
     .main #d9 .fragment .contact h1, .main #d9 .fragment .contact h2 {
         font-size: 1.25rem;
         margin-bottom: 1.5rem;
+    }
+    .main #d9 .fragment .contact a.social {
+        max-width: 25px;
+        max-height: 25px;    
     }
     .main #d10 .fragment {
         bottom: unset;
