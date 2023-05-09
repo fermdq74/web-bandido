@@ -577,6 +577,7 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: row;
     align-self: center;
+    max-height: 464px;
 }
 .main #d5 .fragment .black-box-left {
     width:75%;
@@ -1367,8 +1368,67 @@ button:hover, input[type="submit"]:hover {
         width: 100vh;
     }
 }
+@media screen and (max-height: 864px) {
+    .main #d5 .fragment .black-box-left, .main #d5 .fragment .black-box-right {
+        width: 50%;
+    }
 
-@media (max-width: 767px) {
+}
+@media (max-width: 1280px) {
+    .main #d7 .fragment .content-wrapper p br {
+        display: none;
+    }
+    .wanted {
+        font-size: 24.25rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main #d2 .fragment h2.claim2 {
+        font-size: 8rem;
+    }
+    .main #d4 .fragment p {
+        font-size: 3.5rem;
+    }
+    .main #d5 .fragment {
+        padding: 3vh;
+    }
+    .main #d5 .fragment .black-box-left {
+        width: 60%;
+    }
+    .main #d6 .fragment {
+        margin: auto;
+    }
+    .main #d6 .fragment .video-card .video-thumb {
+        max-width: 400px;
+    }
+    .main #d7 .fragment .content-wrapper {
+        padding: 20px;
+    }
+    .main #d7 .fragment .content-wrapper p br {
+        display: none;
+    }
+    .main #d7 .fragment .content-wrapper .clients .logo-cell {
+        margin-bottom: 10px;
+    }
+    .main #d7 .fragment .content-wrapper .clients .logo-cell img {
+        max-width: 100%;
+    }
+    .wanted {
+        font-size: 20.25rem;
+    }
+    .main #d8 .fragment {
+        width: 94vw;
+    }
+    .main #d9 .fragment .contact .content {
+        width: 50%;
+    }
+    .main #d10 .fragment h2 {
+        font-size: 5.25rem;
+    }
+}
+
+@media (max-width: 991px) {
     .scroller, nav {
         display: none;
     }
@@ -1384,6 +1444,9 @@ button:hover, input[type="submit"]:hover {
     }
     .fixed header h1.title img {
         max-width: 100%;
+    }
+    .main .fragment {
+        max-width: 478px;
     }
     .main #d1 .fragment h2.claim {
         font-size: 1.875rem;
@@ -1404,8 +1467,10 @@ button:hover, input[type="submit"]:hover {
     .main #d2 .fragment {
         min-height: 224px;
         width: 80vw;
+        max-width: 478px;
     }
     .main #d4 .fragment {
+        max-width: 564px;
         width: 79vw;
     }
     .main #d4 .fragment p {
@@ -1415,6 +1480,7 @@ button:hover, input[type="submit"]:hover {
         padding: 3vh;
         width: 60vw;
         height: 50vh;
+        max-width: 478px;
     }
     .main #d5 .fragment .black-box {
         padding: 10px;
@@ -1487,19 +1553,23 @@ button:hover, input[type="submit"]:hover {
     }
     .main #d6 .fragment .video-card .video-title {
         font-size: .75rem;
+        text-align: center;
     }
     .main #d6 .fragment .video-card .video-thumb {
         width: 100%;
         height: auto;
     }
-
+    
+    .main #d7 .fragment {
+        max-width: 596px;
+    }
     .main #d7 .fragment .content-wrapper {
         max-width: 86%;
         padding: .5rem;
     }
     .main #d7 .fragment .content-wrapper p {
         font-size: 1.2rem;
-        width: 40%;
+        width: 60%;
     }
     .main #d7 .fragment .content-wrapper p br {
         display: none;
@@ -1535,6 +1605,7 @@ button:hover, input[type="submit"]:hover {
 
     .main #d8 .fragment {
         width: 92vw;
+        max-width: 660px;
     }
     .main #d8 .fragment .content-wrapper {
         padding: 0.5rem;
@@ -1568,7 +1639,9 @@ button:hover, input[type="submit"]:hover {
         left: -25px;
         top: 2rem;
     }
-
+    .main #d9 .fragment {
+        max-width: 640px;
+    }
     .main #d9 .fragment .subscribe {
         padding: .5rem;
     }
@@ -1608,6 +1681,7 @@ button:hover, input[type="submit"]:hover {
         max-height: 300px;
         width: 83vw;
         padding: 0.5rem 2.5rem;
+        max-width: 640px;
     }
     .main #d10 .fragment h2 {
         font-size: 3rem;
