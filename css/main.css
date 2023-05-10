@@ -341,6 +341,9 @@ nav ul li a:hover::after {
   }
 
 @media (orientation: portrait) {
+    body {
+        overflow-x: hidden;
+    }
     .main, .scroller {
         display: none !important
     }
@@ -1394,7 +1397,8 @@ button:hover, input[type="submit"]:hover {
         padding: 3vh;
     }
     .main #d5 .fragment .black-box-left {
-        width: 60%;
+        /*width: 60%;*/
+        width: 72%;
     }
     .main #d6 .fragment {
         margin: auto;
