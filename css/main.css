@@ -1119,7 +1119,7 @@ button:hover, input[type="submit"]:hover {
     display: none;
 }
 .main #d9 .fragment .contact .content {
-    width: 34%;
+    width: 50%;
     float: right;
     text-align: right;
 }
@@ -1419,9 +1419,6 @@ button:hover, input[type="submit"]:hover {
     }
     .main #d8 .fragment {
         width: 94vw;
-    }
-    .main #d9 .fragment .contact .content {
-        width: 50%;
     }
     .main #d10 .fragment h2 {
         font-size: 5.25rem;
